@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="img/kairosdb_icon.png">
+
+<title>KairosDB中文社区</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<!-- Custom styles for this template -->
+<link href="css/kairosdb.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand logo" href="#"><img
+					alt="Brand" src="img/kairosdb.png"></a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#">概述</a></li>
+					<li><a href="//kairosdb.github.io/docs/build/html/index.html">英文文档</a></li>
+					<li><a href="docs/build/html/index.html">中文文档</a></li>
+					<li><a
+						href="https://groups.google.com/forum/#!forum/kairosdb-group"
+						target="_blank">官方社区(google需梯子)</a></li>
+					<li><a href="https://github.com/kairosdb/kairosdb">项目Github</a></li>
+					<form class="navbar-form navbar-right"
+						action="docs/build/html/search.html" method="get">
+						<div class="form-group">
+							<input type="text" name="q" class="form-control"
+								placeholder="搜索" />
+						</div>
+						<input type="hidden" name="check_keywords" value="yes" /> <input
+							type="hidden" name="area" value="default" />
+					</form>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<div class="jumbotron">
+		<div class="container">
+			<img src="img/kairosdb_dark.png" alt="KairosDB logo">
+			<p class="subtitle">KairosDB是基于Cassandra存储的快速时间序列数据库</p>
+			<hr class="intro-divider" />
+			<ul class="list-inline intro-social-buttons">
+				<li><a href="docs/build/html/GettingStarted.html"
+					class="btn btn-default btn-lg"> <i class="fa fa-book"></i>
+						开始了解
+				</a></li>
+				<li><a href="https://github.com/kairosdb/kairosdb/releases"
+					class="btn btn-default btn-lg"> <i class="fa fa-download"></i>
+						下载发行版
+				</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container" >
+		<div class="features">
+			<div class="row  text-center" >
+				<h2>丰富的特性来满足您的需求</h2>
+				<hr class="blue-divider" />
+			</div>
+			<div class="row  text-center" >
+				<div class="col-md-3">
+					<span class="fa-stack fa-3x"> <i
+						class="fa fa-circle fa-stack-2x"></i> <i
+						class="fa fa-cogs fa-stack-1x fa-inverse"></i>
+					</span>
+					<h2>数据收集器</h2>
+					<p class="desc">数据可以通过多种协议推送到KairosDB，例如Telnet, Rest, Graphite. 还可以使用插件等其他机制</p>
+					<p>
+						<a class="btn btn-default" href="docs/build/html/PushingData.html"
+							role="button">了解更多 &raquo;</a>
+					</p>
+				</div>
+				<div class="col-md-3">
+					<span class="fa-stack fa-3x"> <i
+						class="fa fa-circle fa-stack-2x"></i> <i
+						class="fa fa-database fa-stack-1x fa-inverse"></i>
+					</span>
+					<h2>
+						存储引擎
+					</h2>
+					<p class="desc">
+						KairosDB 存储时间序列数据到 <a
+							href="http://cassandra.apache.org/">Cassandra</a>上, 它是一款NoSQL数据库. 存储schema模型包含3列族
+					</p>
+					<p>
+						<a class="btn btn-default"
+							href="docs/build/html/CassandraSchema.html" role="button">了解更多&raquo;</a>
+					</p>
+				</div>
+				<div class="col-md-3">
+					<span class="fa-stack fa-3x"> <i
+						class="fa fa-circle fa-stack-2x"></i> <i
+						class="fa fa-code fa-stack-1x fa-inverse"></i>
+					</span>
+					<h2>
+						Rest风格API
+					</h2>
+					<p class="desc">这个API提供了操作存在的指标名称列表,列表标签名称和值,存储度量数据和查询指标数据点的接口。</p>
+					<p>
+						<a class="btn btn-default"
+							href="docs/build/html/restapi/Overview.html" role="button">Learn
+							more &raquo;</a>
+					</p>
+				</div>
+				<div class="col-md-3">
+					<span class="fa-stack fa-3x"> <i
+						class="fa fa-circle fa-stack-2x"></i> <i
+						class="fa fa-line-chart fa-stack-1x fa-inverse"></i>
+					</span>
+					<h2>
+						Web UI管理界面
+					</h2>
+					<p class="desc">默认安装时,KairosDB提供一个查询页面,您可以查询数据存储中的数据。它的设计主要是为开发方便。</p>
+					<p>
+						<a class="btn btn-default" href="docs/build/html/WebUI.html"
+							role="button">了解更多 &raquo;</a>
+					</p>
+				</div>
+
+			</div>
+			<div class="row text-center" style="margin-top:50px">
+				<div class="col-md-3">
+					<span class="fa-stack fa-3x"> <i
+						class="fa fa-circle fa-stack-2x"></i> <i
+						class="fa fa-cog fa-stack-1x fa-inverse"></i>
+					</span>
+					<h2>
+						聚合器
+					</h2>
+					<p class="desc">聚合器提供了一个操作数据点和样本的方法。
+						提供了标准聚合函数例如：最小,最大,和,统计,和更多的聚合器</p>
+					<p>
+						<a class="btn btn-default"
+							href="docs/build/html/restapi/QueryMetrics.html" role="button">了解更多 &raquo;</a>
+					</p>
+				</div>
+				<div class="col-md-3">
+					<span class="fa-stack fa-3x"> <i
+						class="fa fa-circle fa-stack-2x"></i> <i
+						class="fa fa-exchange fa-stack-1x fa-inverse"></i>
+					</span>
+					<h2>
+						工具
+					</h2>
+					<p class="desc">提供导入和导出KairosDB数据的命令行工具。
+						并且KairosDB内部运行的指标数据也存储在数据库中，由此可以监控服务器的性能</p>
+					<p>
+						<a class="btn btn-default"
+							href="docs/build/html/ImportExport.html" role="button">了解更多 &raquo;</a>
+					</p>
+				</div>
+				<div class="col-md-3">
+					<span class="fa-stack fa-3x"> <i
+						class="fa fa-circle fa-stack-2x"></i> <i
+						class="fa fa-coffee fa-stack-1x fa-inverse"></i>
+					</span>
+					<h2>
+						客户端库
+					</h2>
+					<p class="desc">KairosDB数据库客户端是一个Java库,使用了HttpClient,使发送指标和查询变得简单。</p>
+					<p>
+						<a class="btn btn-default"
+							href="https://github.com/kairosdb/kairosdb-client/" role="button">了解更多 &raquo;</a>
+					</p>
+				</div>
+				<div class="col-md-3">
+					<span class="fa-stack fa-3x"> <i
+						class="fa fa-circle fa-stack-2x"></i> <i
+						class="fa fa-plug fa-stack-1x fa-inverse"></i>
+					</span>
+					<h2>
+						插件机制
+					</h2>
+					<p class="desc">KairosDB提供了多个扩展点(数据点监听器、数据存储、协议处理,…)使用或者自行开发基于Guice的插件即可满足需求。 </p>
+					<p>
+						<a class="btn btn-default"
+							href="docs/build/html/kairosdevelopment/Plugins.html"
+							role="button">了解更多 &raquo;</a>
+					</p>
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+	<!-- /container -->
+
+	<div class="references">
+		<div class="container">
+			<div class="row  text-center" >
+				<h2>使用案例</h2>
+				<hr class="white-divider" />
+			</div>
+			<div class="row  text-center" >
+				<div class="col-md-3">
+					<div class="company" style="background-color:#2d2d2d">
+						<span class="va"><a target="_blank" href="https://www.proofpoint.com/"><img src="img/proofpoint.png"></a></span>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="company" style="background-color:#ffffff">
+						<span class="va"><a target="_blank" href="http://spinn3r.com/"><img src="img/spinn3r.jpg"></a></span>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="company" style="background-color:#1a1a1a">
+						<span class="va"><a target="_blank" href="https://blog.raintank.io/the-promising-kairosdb/"><img src="img/raintank-logo.png"></a></span>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="company" style="background-color:#888888">
+						<span class="va"><a target="_blank" href="https://tech.zalando.com/blog/monitoring-the-zalando-platform/"><img src="img/zalando-logo.png"></a></span>
+					</div>
+				</div>
+			</div>
+			<div class="row  text-center" >
+				<div class="col-md-3">
+					<div class="company" style="background-color:#01648e">
+						<span class="va"><a target="_blank" href="http://www.enbasesolutions.com/"><img src="img/logo-enbase.png"></a></span>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="company" style="background-color:#00552e">
+						<span class="va"><a target="_blank" href="http://www.lampiris.be/"><img src="img/lampiris-logo.png"></a></span>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="company" style="background-color:#ffffff">
+						<span class="va"><a target="_blank" href="http://www.signal.co/"><img src="img/signal-logo.png"></a></span>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="company" style="background-color:#252528">
+						<span class="va"><a target="_blank" href="http://www.abiquo.com/"><img src="img/abiquo-logo.png"></a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="mfooter">
+		<div class="container">
+			<div class="row  text-center" >
+			<img src="img/kairosdb_logo.png">
+			<p> KairosDB &copy - 2015 </p>
+				<p> 中文版KairosDB  &copy max256.com created by fbf - 2017 </p>
+			</div>
+		</div>
+	</div>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
