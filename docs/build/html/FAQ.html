@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Frequently Asked Questions &mdash; KairosDB 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.4/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.4/css/bootstrap-none.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/kairosdb.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="top" title="KairosDB 1.0.1 documentation" href="index.html" />
+    <link rel="next" title="Pushing data" href="PushingData.html" />
+    <link rel="prev" title="Getting Started" href="GettingStarted.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+
+
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand logo" href="http://kairosdb.github.io/"><img alt="Brand" src="_static/kairosdb.png"></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="#">概述</a></li>
+                  <li><a href="//kairosdb.github.io/docs/build/html/index.html">英文文档</a></li>
+                  <li><a href="docs/build/html/index.html">中文文档</a></li>
+                  <li><a
+                          href="https://groups.google.com/forum/#!forum/kairosdb-group"
+                          target="_blank">官方社区(google需梯子)</a></li>
+                  <li><a href="https://github.com/kairosdb/kairosdb">项目Github</a></li>
+                  <form class="navbar-form navbar-right"
+                        action="docs/build/html/search.html" method="get">
+                      <div class="form-group">
+                          <input type="text" name="q" class="form-control"
+                                 placeholder="搜索" />
+                      </div>
+                      <input type="hidden" name="check_keywords" value="yes" /> <input
+                          type="hidden" name="area" value="default" />
+                  </form>
+              </ul>
+          </div><!--/.nav-collapse -->
+      </div>
+  </nav>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-12">
+      
+  <div class="section" id="frequently-asked-questions">
+<h1>常见问答<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="why-would-i-pre-aggregate">
+<h2>我为什么要预聚合?<a class="headerlink" href="#why-would-i-pre-aggregate" title="Permalink to this headline">¶</a></h2>
+<p>假设你有一个图形数据显示每1小时的平均数据在一个星期。你更新这张图一天几次,每一次你的代码查询一周的数据总量。每次运行该查询时你将重新处理99%的相同的数据，处理你最后一次运行查询，可以做些什么?</p>
+<p>这里有一些策略:</p>
+<ol class="arabic simple">
+<li>预聚合数据在写入的数据之前。
+    这里的挑战是,并不是所有的数据是通过相同的K*节点。
+    在负载均衡系统传入数据分布在几个K节点,K节点进行实时聚合.</li>
+<li>只查询新数据。 这里的考虑是,你的可视化工具是足够聪明的，只查询新的数据合并成图。  Cubism.js 是一个声称这样的功能的工具.</li>
+<li>批处理预聚合作业并写入到一个新的metric度量指标.  这个新的 metric 可以查询和用于生成图像数据。
+    这将通过定时任务。  有一些讨论使K的批处理作业的一部分,但有工作要做在此之前可能发生.</li>
+</ol>
+<p>其他常见问题可以在这里找到: <a class="reference external" href="https://github.com/kairosdb/kairosdb/wiki/Frequently-Asked-Questions">https://github.com/kairosdb/kairosdb/wiki/Frequently-Asked-Questions</a></p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">回到顶部</a>
+      
+    </p>
+
+  </div>
+</footer>
+  </body>
+</html>

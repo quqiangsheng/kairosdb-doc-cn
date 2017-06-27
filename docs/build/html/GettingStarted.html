@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Getting Started &mdash; KairosDB 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.4/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.4/css/bootstrap-none.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/kairosdb.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="top" title="KairosDB 1.0.1 documentation" href="index.html" />
+    <link rel="next" title="Frequently Asked Questions" href="FAQ.html" />
+    <link rel="prev" title="KairosDB documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+
+
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed"
+                      data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                      aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span> <span
+                      class="icon-bar"></span> <span class="icon-bar"></span> <span
+                      class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand logo" href="#"><img
+                      alt="Brand" src="_static/kairosdb.png"></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="#">概述</a></li>
+                  <li><a href="//kairosdb.github.io/docs/build/html/index.html">英文文档</a></li>
+                  <li><a href="docs/build/html/index.html">中文文档</a></li>
+                  <li><a
+                          href="https://groups.google.com/forum/#!forum/kairosdb-group"
+                          target="_blank">官方社区(google需梯子)</a></li>
+                  <li><a href="https://github.com/kairosdb/kairosdb">项目Github</a></li>
+                  <form class="navbar-form navbar-right"
+                        action="docs/build/html/search.html" method="get">
+                      <div class="form-group">
+                          <input type="text" name="q" class="form-control"
+                                 placeholder="搜索" />
+                      </div>
+                      <input type="hidden" name="check_keywords" value="yes" /> <input
+                          type="hidden" name="area" value="default" />
+                  </form>
+              </ul>
+          </div>
+          <!--/.nav-collapse -->
+      </div>
+  </nav>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-12">
+      
+  <div class="section" id="getting-started">
+<h1>入门指南<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="install">
+<h2>安装<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
+<p>KairosDB 运行在java1.6及以上版本</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>下载 tar.gz 文件 从官网下载地址</li>
+<li>解压到你想存放的地方</li>
+<li>在 conf/kairosdb.properties 修改  kairosdb.service.datastore 属性为您想使用的数据存储方式.  默认使用基于内存存储的H2数据库(这是慢的 退出后数据会丢失)</li>
+<li>确保已经正确安装jdk并且设置JAVA_HOME</li>
+<li>切换到bin目录并且运行 <tt class="docutils literal"><span class="pre">&gt;./kairosdb.sh</span> <span class="pre">run</span></tt></li>
+</ol>
+</div></blockquote>
+<div class="section" id="changing-file-handle-limit-on-linux">
+<h3>修改linux文件打开上限(如果已修改可以忽略这步)<a class="headerlink" href="#changing-file-handle-limit-on-linux" title="Permalink to this headline">¶</a></h3>
+<p>如果你有很多的客户端推送度量数据,这可能会耗尽系统的打开文件句柄。我们建议增加文件句柄的数量。这是一个例子 [<a class="reference external" href="http://tech-torch.blogspot.com/2009/07/linux-ubuntu-tomcat-too-many-open-files.html">http://tech-torch.blogspot.com/2009/07/linux-ubuntu-tomcat-too-many-open-files.html</a> 修改CentOS的文件打开上限].</p>
+</div>
+<div class="section" id="changing-datastore">
+<h3>更改数据存储方式<a class="headerlink" href="#changing-datastore" title="Permalink to this headline">¶</a></h3>
+<p>KairosDB 可以配置使用一个后端存储引擎作为数据持久化方式.  KairosDB默认使用H2内存数据库存储datapoints(数据点).  改变所使用的数据存储方式 <tt class="docutils literal"><span class="pre">kairosdb.service.datastore</span></tt> 属性 在kairosdb.properties 文件中.</p>
+</div>
+<div class="section" id="using-with-h2">
+<h3>使用H2<a class="headerlink" href="#using-with-h2" title="Permalink to this headline">¶</a></h3>
+<p><tt class="docutils literal"><span class="pre">kairosdb.service.datastore=org.kairosdb.datastore.h2.H2Module</span></tt></p>
+<p>KairosDB默认使用H2内存数据库存储 这允许你做开发工作时在没有设置数据存储为Cassandra或者HBase的情况下能直接运行</p>
+<div class="section" id="configuration-options">
+<h4>配置项<a class="headerlink" href="#configuration-options" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="58%" />
+<col width="42%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>kairosdb.datastore.h2.database_path</td>
+<td>h2数据文件的地址</td>
+</tr>
+</tbody>
+</table>
+<p>删除和重新启动kairosdb数据库文件夹将导致重新创建数据库，其中没有数据</p>
+</div>
+</div>
+<div class="section" id="using-with-cassandra">
+<h3>使用Cassandra<a class="headerlink" href="#using-with-cassandra" title="Permalink to this headline">¶</a></h3>
+<p><tt class="docutils literal"><span class="pre">kairosdb.service.datastore=org.kairosdb.datastore.cassandra.CassandraModule</span></tt></p>
+<p>使用Cassandra的默认配置是使用行存储数据。每一行将包含3周的数据。 设置为3周的原因是如果你每毫秒写入一个度量指标，3周刚好超过10亿列。  Cassandra有20亿个列的限制。</p>
+<p>行大小一直有些困惑。基本上它可以归结为这样: 更多的数据可以存入一行以便更好的进行数据查询。  但这并不意味着cassandra只支持保存3周的数据, 这意味着数据写入同一行每3周新的数据去保存到下一个新行。  参见[CassandraSchema cassandra schema for more details].</p>
+<p>更改 read_repair_chance:  这个值告诉cassandra多久执行一个读修复。 读修复机会将默认为1(100% ).  推荐值为0.1 (10% ).  改变方法运行cassandra-cli 并执行以下命令</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt; use kairosdb;
+&gt; update column family data_points with read_repair_chance = 0.1;
+&gt; update column family row_key_index with read_repair_chance = 0.1;
+&gt; update column family string_index with read_repair_chance = 0.1;
+</pre></div>
+</div>
+<div class="section" id="id1">
+<h4>配置项<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>对于选项的完整列表,请参见cassandra部分在 kairosdb.properties.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="83%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>kairosdb.datastore.cassandra.host_name</td>
+<td> Cassandra 服务器的主机名或者ip地址</td>
+</tr>
+<tr class="row-even"><td>kairosdb.datastore.cassandra.port</td>
+<td>Cassandra 端口号</td>
+</tr>
+<tr class="row-odd"><td>kairosdb.datastore.cassandra.replication_factor</td>
+<td>写数据到Cassandra的复制因子 [<a class="reference external" href="http://www.datastax.com/docs/1.0/cluster_architecture/replication">http://www.datastax.com/docs/1.0/cluster_architecture/replication</a> 查看更多]</td>
+</tr>
+<tr class="row-even"><td>kairosdb.datastore.cassandra.write_delay</td>
+<td>在写数据到Cassandra时的后台线程等待的时间。这允许批处理数据到数据存储组件中</td>
+</tr>
+<tr class="row-odd"><td>kairosdb.datastore.cassandra.single_row_read_size</td>
+<td>列数读的时候读一行。  这是一个平衡性能和内存使用的配置。 这个值时使用查询row key索引和执行后续查询时一行在最初的多。 </td>
+</tr>
+<tr class="row-even"><td>kairosdb.datastore.cassandra.multi_row_read_size</td>
+<td>The number of columns read on the initial multi get for a query.  If your data has very few tags make this number big.  If your metrics have lots of tag combinations then back this number down or you may run into out of memory issues.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="configuring-hbase">
+<h3>配置 HBase<a class="headerlink" href="#configuring-hbase" title="Permalink to this headline">¶</a></h3>
+<p>HBase 基本不再支持。 (由于历史遗留原因这里也不在翻译) Originally the HBase support was achieved by forking the OpenTSDB code base and making it into a Datastore plugin for KairosDB.  The functionality of KairosDB has moved beyond what HBase code can support.</p>
+</div>
+<div class="section" id="using-as-a-remote-datastore">
+<h3>使用远程数据存储<a class="headerlink" href="#using-as-a-remote-datastore" title="Permalink to this headline">¶</a></h3>
+<p><tt class="docutils literal"><span class="pre">kairosdb.service.datastore=org.kairosdb.datastore.remote.RemoteModule</span></tt></p>
+<p>作为远程数据存储设置本地Kairos实例，存储和转发传入的数据点到远程Kairos服务器。数据存储在一个目录使用json格式 在一个可配置的后台调度线程上将压缩数据上传到远程Kairos数据库实例。</p>
+<div class="section" id="id2">
+<h4>配置项<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+    <col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>kairosdb.datastore.remote.data_dir</td>
+<td>Directory in which the data points are collected.  Defaults to the current directory.</td>
+</tr>
+<tr class="row-even"><td>kairosdb.datastore.remote.remote_url</td>
+<td>URL of the KairosDB instance to which data will be forwarded.  Ex. <a class="reference external" href="http://10.10.10.10:8080">http://10.10.10.10:8080</a></td>
+</tr>
+<tr class="row-odd"><td>kairosdb.datastore.remote.schedule</td>
+<td>Quartz cron schedule for how often to upload collected data.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="starting-and-stopping">
+<h2>启动和停止<a class="headerlink" href="#starting-and-stopping" title="Permalink to this headline">¶</a></h2>
+<p>在bin目录中 启动和停止是通过运行kairosdb.sh脚本。</p>
+<p>启动作为前台进程 命令行退出即程序退出</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt; ./kairosdb.sh run
+</pre></div>
+</div>
+<p>启动作为后台进程</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt; ./kairosdb.sh start
+</pre></div>
+</div>
+<p>停止正在运行的后台进程</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt; ./kairosdb.sh stop
+</pre></div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">回到顶部</a>
+      
+    </p>
+
+  </div>
+</footer>
+  </body>
+</html>

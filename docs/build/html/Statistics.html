@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>KairosDB Statistics &mdash; KairosDB 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.4/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.4/css/bootstrap-none.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/kairosdb.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="top" title="KairosDB 1.0.1 documentation" href="index.html" />
+    <link rel="next" title="Kairos DB Java Client Library" href="KairosClient.html" />
+    <link rel="prev" title="Logging" href="Logging.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+
+
+
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand logo" href="http://kairosdb.github.io/"><img alt="Brand" src="_static/kairosdb.png"></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="#">概述</a></li>
+                  <li><a href="//kairosdb.github.io/docs/build/html/index.html">英文文档</a></li>
+                  <li><a href="docs/build/html/index.html">中文文档</a></li>
+                  <li><a
+                          href="https://groups.google.com/forum/#!forum/kairosdb-group"
+                          target="_blank">官方社区(google需梯子)</a></li>
+                  <li><a href="https://github.com/kairosdb/kairosdb">项目Github</a></li>
+                  <form class="navbar-form navbar-right"
+                        action="docs/build/html/search.html" method="get">
+                      <div class="form-group">
+                          <input type="text" name="q" class="form-control"
+                                 placeholder="搜索" />
+                      </div>
+                      <input type="hidden" name="check_keywords" value="yes" /> <input
+                          type="hidden" name="area" value="default" />
+                  </form>
+              </ul>
+          </div><!--/.nav-collapse -->
+      </div>
+  </nav>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav"><h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PushingData.html">Pushing data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QueryingData.html">Querying data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ImportExport.html">Importing and Exporting Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WebUI.html">Web UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Logging.html">Logging</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">KairosDB Statistics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#metrics-reported">Metrics Reported</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="KairosClient.html">Kairos DB Java Client Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CassandraSchema.html">Cassandra Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Roll-ups.html">Roll-ups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kairosdevelopment/index.html">Kairos Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="restapi/index.html">REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="telnetapi/index.html">Telnet API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Graphite.html">Graphite Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IssueTracking.html">Bug Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="External.html">External links</a></li>
+</ul>
+
+<form action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  <div class="section" id="kairosdb-statistics">
+<h1>KairosDB Statistics<a class="headerlink" href="#kairosdb-statistics" title="Permalink to this headline">¶</a></h1>
+<p>KairosDB writes internal metrics to the data store so you can monitor the server&#8217;s performance. Because the metrics are stored in the data store you can use the UI to view the statistics.</p>
+<p>These internal metrics are written once per minute by default. You can adjust how often they are reported by modifying the reporter period and report period unit properties in the kairosdb.properties file.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">kairosdb</span><span class="o">.</span><span class="n">reporter</span><span class="o">.</span><span class="n">period</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">kairosdb</span><span class="o">.</span><span class="n">reporter</span><span class="o">.</span><span class="n">period_unit</span><span class="o">=</span><span class="n">minute</span>
+</pre></div>
+</div>
+<p>The possible values for kairosdb.reporter.period_unit are milliseconds, seconds, minutes, hours, and days.</p>
+<p>If you change these properties you must restart KairosDB for the changes to take effect.</p>
+<p>You can turn off metrics reporting by removing the kairosdb.service.reporter property from the property file.</p>
+<div class="section" id="metrics-reported">
+<h2>Metrics Reported<a class="headerlink" href="#metrics-reported" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><em>kairosdb.datastore.cassandra.key_query_time</em> - Time in milliseconds to query the row keys from Cassandra.</li>
+<li><em>kairosdb.datastore.query_collisions</em> - Number of identical queries that are ran at the same time.  Or one was started before the other finished.</li>
+<li><em>kairosdb.datastore.query_row_count</em> - The number of rows a query retrieved data from.</li>
+<li><em>kairosdb.datastore.query_sample_size</em> - The number of data points a query retrieves from Cassandra (before aggregation).</li>
+<li><em>kairosdb.datastore.query_time</em> - The number of milliseconds to retreive the data out of Cassandra for a query (not including key lookup).</li>
+<li><em>kairosdb.datastore.write_size</em> - The number of data points written to the data store during the last write.</li>
+<li><em>kairosdb.http.ingest_count</em> - The number of data points ingested via HTTP since the last report.</li>
+<li><em>kairosdb.http.ingest_time</em> - The amount of time to ingest the number of metrics from kairosdb.http.ingest_count.  So ingest_count / ingest_time is an average of how fast a single metric is inserted.</li>
+<li><em>kairosdb.http.query_time</em> - The amount of time a query takes from processing the request to formating the response.  Does not include time to send data to client.</li>
+<li><em>kairosdb.http.request_time</em> - The total amount of time an HTTP request takes from recieving data to sending response.</li>
+<li><em>kairosdb.jvm.free_memory</em> - The amount of free memory available in the JVM.</li>
+<li><em>kairosdb.jvm.total_memory</em> - The amount of total memory in the JVM.</li>
+<li><em>kairosdb.jvm.max_memory</em> - The maximum amount of memory the JVM will attempt to use.</li>
+<li><em>kairosdb.jvm.thread_count</em> - The total number of threads running in the JVM.</li>
+<li><em>kairosdb.metric_counters</em> - Counts the number of data points received since the last report.  Tags are used to separate one metric from another.</li>
+<li><em>kairosdb.protocol.http_request_count</em> - The number of HTTP requests for each method. This includes a method tag that indicates the method that was called. For example, method=query if a query was done.</li>
+<li><em>kairosdb.protocol.telnet_request_count</em> - The number of telnet requests for each method. This includes a method tag that indicates the method that called. For example, method=put if the put method was called.</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, KairosDB Team.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

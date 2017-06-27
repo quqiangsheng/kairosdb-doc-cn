@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>KairosDB 中文文档 &mdash; 基于KairosDB 1.0.1 版本制作</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.4/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.4/css/bootstrap-none.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/kairosdb.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="top" title="KairosDB 1.0.1 documentation" href="#" />
+    <link rel="next" title="Getting Started" href="GettingStarted.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+
+
+
+ <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand logo" href="http://kairosdb.github.io/"><img alt="Brand" src="_static/kairosdb.png"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">概述</a></li>
+                <li><a href="//kairosdb.github.io/docs/build/html/index.html">英文文档</a></li>
+                <li><a href="docs/build/html/index.html">中文文档</a></li>
+                <li><a
+                        href="https://groups.google.com/forum/#!forum/kairosdb-group"
+                        target="_blank">官方社区(google需梯子)</a></li>
+                <li><a href="https://github.com/kairosdb/kairosdb">项目Github</a></li>
+                <form class="navbar-form navbar-right"
+                      action="docs/build/html/search.html" method="get">
+                    <div class="form-group">
+                        <input type="text" name="q" class="form-control"
+                               placeholder="搜索" />
+                    </div>
+                    <input type="hidden" name="check_keywords" value="yes" /> <input
+                        type="hidden" name="area" value="default" />
+                </form>
+            </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav"><h3><a href="#">目录</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="GettingStarted.html">开始</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">常见问题与解答FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PushingData.html">推送数据</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QueryingData.html">查询数据</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ImportExport.html">导入导出数据</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WebUI.html">Web UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Configuration.html">配置项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Logging.html">日志</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Statistics.html">KairosDB统计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="KairosClient.html">Kairos DB Java 客户端库</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CassandraSchema.html">Cassandra数据库Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Roll-ups.html">Roll-ups机制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kairosdevelopment/index.html">Kairos 开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="restapi/index.html">REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="telnetapi/index.html">Telnet API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Graphite.html">Graphite 协议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IssueTracking.html">Bug 追踪</a></li>
+<li class="toctree-l1"><a class="reference internal" href="External.html">扩展</a></li>
+</ul>
+
+<form action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="搜索" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+
+      <!--正文-->
+    <div class="col-md-9">
+      
+  <div class="section" id="kairosdb-documentation">
+<h1>KairosDB 中文文档<a class="headerlink" href="#kairosdb-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="GettingStarted.html">开始</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="GettingStarted.html#install">安装</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GettingStarted.html#changing-file-handle-limit-on-linux">更改Linux的文件打开数限制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GettingStarted.html#changing-datastore">更改数据源</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GettingStarted.html#using-with-h2">使用H2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GettingStarted.html#using-with-cassandra">使用Cassandra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GettingStarted.html#configuring-hbase">配置HBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GettingStarted.html#using-as-a-remote-datastore">使用远程数据存储</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="GettingStarted.html#starting-and-stopping">启动与停止</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">常见问题与解答FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="FAQ.html#why-would-i-pre-aggregate">为什么要预聚合?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PushingData.html">推送数据</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PushingData.html#submitting-data-via-telnet">通过telnet提交数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PushingData.html#submitting-data-via-rest">通过rest提交数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PushingData.html#graphite-protocol">通过Graphite协议</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="QueryingData.html">查询数据</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ImportExport.html">导入语导出数据</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ImportExport.html#exporting-data">导出数据</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ImportExport.html#export-switches">导出转换</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ImportExport.html#importing-data">导入数据</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ImportExport.html#import-switches">导入转换</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ImportExport.html#performance-numbers">性能数据</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="WebUI.html">Web UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Configuration.html">配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Logging.html">日志</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Statistics.html">KairosDB 统计</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Statistics.html#metrics-reported">指标报告</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="KairosClient.html">Kairos DB Java 客户端库</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CassandraSchema.html">Cassandra数据库Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CassandraSchema.html#column-families">列族</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CassandraSchema.html#data-points-column-family">数据点列族</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CassandraSchema.html#row-key-index-column-family">Row Key 索引列族</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CassandraSchema.html#string-index-column-family">字符串索引列族</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CassandraSchema.html#how-the-schema-is-used">模式是如何使用的</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CassandraSchema.html#comparison-to-opentsdb-hbase">与基于HBase的OpenTSDB比较</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Roll-ups.html">Roll-ups</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Roll-ups.html#installing">安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Roll-ups.html#example">例子</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kairosdevelopment/index.html">Kairos 开发</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kairosdevelopment/Plugins.html">插件</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kairosdevelopment/Plugins.html#plugin-requirements">制作插件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kairosdevelopment/Plugins.html#plugin-loading-process">插件加载过程</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kairosdevelopment/CustomData.html">自定义数据</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kairosdevelopment/CustomData.html#steps-for-creating-custom-data-type">创建自定义数据类型的步骤</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kairosdevelopment/CustomData.html#example-for-creating-custom-types">创建自定义数据类型的例子</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kairosdevelopment/IntelliJSetup.html">用IntelliJ编辑Kairos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kairosdevelopment/IntelliJSetup.html#import-project">导入project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kairosdevelopment/IntelliJSetup.html#configure-modules">配置 Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kairosdevelopment/IntelliJSetup.html#alternative-approach">转换方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kairosdevelopment/IntelliJSetup.html#running-kairos">运行 Kairos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="restapi/index.html">REST API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="restapi/Overview.html">概览</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Overview.html#what-data-do-i-store">数据该怎么存储</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="restapi/AddDataPoints.html">添加 Data Points( 数据点)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="restapi/AddDataPoints.html#method">方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/AddDataPoints.html#request">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/AddDataPoints.html#body">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/AddDataPoints.html#description">描述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/AddDataPoints.html#response">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="restapi/DeleteDataPoints.html">删除 Data Points( 数据点)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="restapi/DeleteDataPoints.html#method">方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/DeleteDataPoints.html#request">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/DeleteDataPoints.html#body">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/DeleteDataPoints.html#response">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="restapi/DeleteMetric.html">删除 Metric（度量）</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="restapi/DeleteMetric.html#method">  方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/DeleteMetric.html#request"> 请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/DeleteMetric.html#body">    内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/DeleteMetric.html#response">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="restapi/Health.html">健康检查</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Health.html#status">状态</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Health.html#check">检查</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="restapi/ListMetricNames.html"> Metric 名字列表</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="restapi/ListMetricNames.html#method">  方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/ListMetricNames.html#request"> 请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/ListMetricNames.html#body">    内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/ListMetricNames.html#response">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="restapi/ListTagNames.html"> Tag 名字列表</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="restapi/ListTagNames.html#method">  方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/ListTagNames.html#request"> 请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/ListTagNames.html#body">    内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/ListTagNames.html#response">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="restapi/ListTagValues.html"> Tag 值列表</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="restapi/ListTagValues.html#method">  方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/ListTagValues.html#request"> 请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/ListTagValues.html#body">    内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/ListTagValues.html#response">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="restapi/QueryMetrics.html">查询 Metrics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#request-methods">请求方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#method"> 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#request">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#body">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#id1">方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#id2">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#id3">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#query-properties">查询 Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#metric-properties">度量 Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#response">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="restapi/Aggregators.html">聚合器</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#aggregator-parameters">聚合器参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#range-aggregator">范围聚合</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#average">平均值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#standard-deviation">标准差</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#count">统计</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#first">第一</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#gaps">差异</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#histogram">直方图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#last">最后</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#least-squares">最小平方</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#max">最大</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#min">最小</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#percentile">百分比</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#sum">求和</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#diff">微分</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#divide">除</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#rate">比率</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#sampler">采样器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#scale">缩放</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#trim">修剪</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#save-as"> 另存为</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="restapi/QueryMetricTags.html">查询度量标签</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetricTags.html#filtering">过滤器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetricTags.html#method">方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetricTags.html#request">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetricTags.html#body">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetricTags.html#query-properties">查询 Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetricTags.html#metric-properties">度量 Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetricTags.html#response">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="restapi/Roll-ups.html">Roll-ups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restapi/Roll-ups.html#create-roll-up-task">创建 Roll-up 任务</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#method">方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#request">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#body">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#roll-up-properties">Roll-up Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#response">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="restapi/Roll-ups.html#list-roll-up-tasks"> Roll-up 任务列表</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id1">方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id2">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id3">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id4">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="restapi/Roll-ups.html#get-roll-up-task">获得Roll-up Task</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id5">方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id6">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id7">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id8">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="restapi/Roll-ups.html#delete-roll-up-task">删除 Roll-up Task</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id9"> 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id10">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id11">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id12">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="restapi/Roll-ups.html#update-roll-up-task">更新 Roll-up Task</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id13">方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id14">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id15">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id16">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="restapi/Version.html">版本</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="restapi/Version.html#method"> 方法</a></li> 
+<li class="toctree-l3"><a class="reference internal" href="restapi/Version.html#request">请求</a></li> 
+<li class="toctree-l3"><a class="reference internal" href="restapi/Version.html#body">   内容</a></li> 
+<li class="toctree-l3"><a class="reference internal" href="restapi/Version.html#response">响应</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="telnetapi/index.html">Telnet API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="telnetapi/Overview.html">概览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="telnetapi/Put.html">推</a></li>
+<li class="toctree-l2"><a class="reference internal" href="telnetapi/Putm.html">推(毫秒级)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="telnetapi/Version.html">版本</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Graphite.html">Graphite 协议</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Graphite.html#enabling-graphite-protocol">打开 Graphite 协议</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Graphite.html#configuring-graphite-protocol">配置 Graphite 协议</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Graphite.html#custom-tag-parser">自定义标签解析</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="IssueTracking.html">Bug 追踪</a></li>
+<li class="toctree-l1"><a class="reference internal" href="External.html">扩展</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="External.html#kairosdb-plugins">KairosDB 插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="External.html#client-libraries">客户端库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="External.html#collector-libraries">收集器库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="External.html#visualization-tools">可视化工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="External.html#business-intelligence-reporting">BI商业智能 &amp; 报表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="External.html#papers-about-kairosdb">关于KairosDB的文章</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">回到顶部</a>
+      
+    </p>
+
+  </div>
+</footer>
+  </body>
+</html>
