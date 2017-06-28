@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-3.3.4/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.3.4/css/bootstrap-none.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/kairosdb.css" type="text/css" />
     
@@ -33,7 +32,6 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="top" title="KairosDB 1.0.1 documentation" href="#" />
-    <link rel="next" title="Getting Started" href="GettingStarted.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -59,22 +57,17 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">概述</a></li>
-                <li><a href="//kairosdb.github.io/docs/build/html/index.html">英文文档</a></li>
-                <li><a href="docs/build/html/index.html">中文文档</a></li>
+
+                <li><a href="//kairosdb.github.io/docs/build/html/index.html" target="_blank">英文文档</a></li>
+                <li><a href="docs/build/html/index.html" target="_blank">中文文档</a></li>
                 <li><a
                         href="https://groups.google.com/forum/#!forum/kairosdb-group"
                         target="_blank">官方社区(google需梯子)</a></li>
-                <li><a href="https://github.com/kairosdb/kairosdb">项目Github</a></li>
-                <form class="navbar-form navbar-right"
-                      action="docs/build/html/search.html" method="get">
-                    <div class="form-group">
-                        <input type="text" name="q" class="form-control"
-                               placeholder="搜索" />
-                    </div>
-                    <input type="hidden" name="check_keywords" value="yes" /> <input
-                        type="hidden" name="area" value="default" />
-                </form>
+                <li><a
+                        href="//www.kairosdb.com"
+                        target="_blank">中文社区</a></li>
+                <li><a href="https://github.com/kairosdb/kairosdb" target="_blank">项目Github</a></li>
+
             </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -82,299 +75,1406 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav"><h3><a href="#">目录</a></h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="GettingStarted.html">开始</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FAQ.html">常见问题与解答FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="PushingData.html">推送数据</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QueryingData.html">查询数据</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ImportExport.html">导入导出数据</a></li>
-<li class="toctree-l1"><a class="reference internal" href="WebUI.html">Web UI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Configuration.html">配置项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Logging.html">日志</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Statistics.html">KairosDB统计</a></li>
-<li class="toctree-l1"><a class="reference internal" href="KairosClient.html">Kairos DB Java 客户端库</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CassandraSchema.html">Cassandra数据库Schema</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Roll-ups.html">Roll-ups机制</a></li>
-<li class="toctree-l1"><a class="reference internal" href="kairosdevelopment/index.html">Kairos 开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="restapi/index.html">REST API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="telnetapi/index.html">Telnet API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Graphite.html">Graphite 协议</a></li>
-<li class="toctree-l1"><a class="reference internal" href="IssueTracking.html">Bug 追踪</a></li>
-<li class="toctree-l1"><a class="reference internal" href="External.html">扩展</a></li>
-</ul>
-
-<form action="search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="搜索" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-
-      <!--正文-->
-    <div class="col-md-9">
+    <!--正文-->
+    <div class="col-md-12">
       
   <div class="section" id="kairosdb-documentation">
 <h1>KairosDB 中文文档<a class="headerlink" href="#kairosdb-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Contents:</p>
+<p>目录:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="GettingStarted.html">开始</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="GettingStarted.html#install">安装</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="GettingStarted.html#changing-file-handle-limit-on-linux">更改Linux的文件打开数限制</a></li>
-<li class="toctree-l3"><a class="reference internal" href="GettingStarted.html#changing-datastore">更改数据源</a></li>
-<li class="toctree-l3"><a class="reference internal" href="GettingStarted.html#using-with-h2">使用H2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="GettingStarted.html#using-with-cassandra">使用Cassandra</a></li>
-<li class="toctree-l3"><a class="reference internal" href="GettingStarted.html#configuring-hbase">配置HBase</a></li>
-<li class="toctree-l3"><a class="reference internal" href="GettingStarted.html#using-as-a-remote-datastore">使用远程数据存储</a></li>
+<li class="toctree-l1"><a class="reference internal" data-href="GettingStarted.html">开始</a><ul>
+<li class="toctree-l2"><a class="reference internal" data-href="GettingStarted.html#install">安装</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="GettingStarted.html#changing-file-handle-limit-on-linux">更改Linux的文件打开数限制</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="GettingStarted.html#changing-datastore">更改数据源</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="GettingStarted.html#using-with-h2">使用H2</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="GettingStarted.html#using-with-cassandra">使用Cassandra</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="GettingStarted.html#configuring-hbase">配置HBase</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="GettingStarted.html#using-as-a-remote-datastore">使用远程数据存储</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="GettingStarted.html#starting-and-stopping">启动与停止</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="GettingStarted.html#starting-and-stopping">启动与停止</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="FAQ.html">常见问题与解答FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="FAQ.html#why-would-i-pre-aggregate">为什么要预聚合?</a></li>
+<li class="toctree-l1"><a class="reference internal" data-href="FAQ.html">常见问题与解答FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" data-href="FAQ.html#why-would-i-pre-aggregate">为什么要预聚合?</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="PushingData.html">推送数据</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="PushingData.html#submitting-data-via-telnet">通过telnet提交数据</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PushingData.html#submitting-data-via-rest">通过rest提交数据</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PushingData.html#graphite-protocol">通过Graphite协议</a></li>
+<li class="toctree-l1"><a class="reference internal" data-href="PushingData.html">推送数据</a><ul>
+<li class="toctree-l2"><a class="reference internal" data-href="PushingData.html#submitting-data-via-telnet">通过telnet提交数据</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="PushingData.html#submitting-data-via-rest">通过rest提交数据</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="PushingData.html#graphite-protocol">通过Graphite协议</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="QueryingData.html">查询数据</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ImportExport.html">导入语导出数据</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ImportExport.html#exporting-data">导出数据</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ImportExport.html#export-switches">导出转换</a></li>
+<li class="toctree-l1"><a class="reference internal" data-href="QueryingData.html">查询数据</a></li>
+<li class="toctree-l1"><a class="reference internal" data-href="ImportExport.html">导入语导出数据</a><ul>
+<li class="toctree-l2"><a class="reference internal" data-href="ImportExport.html#exporting-data">导出数据</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="ImportExport.html#export-switches">导出转换</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ImportExport.html#importing-data">导入数据</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ImportExport.html#import-switches">导入转换</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="ImportExport.html#importing-data">导入数据</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="ImportExport.html#import-switches">导入转换</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ImportExport.html#performance-numbers">性能数据</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="ImportExport.html#performance-numbers">性能数据</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="WebUI.html">Web UI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Configuration.html">配置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Logging.html">日志</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Statistics.html">KairosDB 统计</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Statistics.html#metrics-reported">指标报告</a></li>
+<li class="toctree-l1"><a class="reference internal" data-href="WebUI.html">Web UI</a></li>
+<li class="toctree-l1"><a class="reference internal" data-href="Configuration.html">配置</a></li>
+<li class="toctree-l1"><a class="reference internal" data-href="Logging.html">日志</a></li>
+<li class="toctree-l1"><a class="reference internal" data-href="Statistics.html">KairosDB 统计</a><ul>
+<li class="toctree-l2"><a class="reference internal" data-href="Statistics.html#metrics-reported">指标报告</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="KairosClient.html">Kairos DB Java 客户端库</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CassandraSchema.html">Cassandra数据库Schema</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CassandraSchema.html#column-families">列族</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="CassandraSchema.html#data-points-column-family">数据点列族</a></li>
-<li class="toctree-l3"><a class="reference internal" href="CassandraSchema.html#row-key-index-column-family">Row Key 索引列族</a></li>
-<li class="toctree-l3"><a class="reference internal" href="CassandraSchema.html#string-index-column-family">字符串索引列族</a></li>
+<li class="toctree-l1"><a class="reference internal" data-href="KairosClient.html">Kairos DB Java 客户端库</a></li>
+<li class="toctree-l1"><a class="reference internal" data-href="CassandraSchema.html">Cassandra数据库Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" data-href="CassandraSchema.html#column-families">列族</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="CassandraSchema.html#data-points-column-family">数据点列族</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="CassandraSchema.html#row-key-index-column-family">Row Key 索引列族</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="CassandraSchema.html#string-index-column-family">字符串索引列族</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="CassandraSchema.html#how-the-schema-is-used">模式是如何使用的</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CassandraSchema.html#comparison-to-opentsdb-hbase">与基于HBase的OpenTSDB比较</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="CassandraSchema.html#how-the-schema-is-used">模式是如何使用的</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="CassandraSchema.html#comparison-to-opentsdb-hbase">与基于HBase的OpenTSDB比较</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Roll-ups.html">Roll-ups</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Roll-ups.html#installing">安装</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Roll-ups.html#example">例子</a></li>
+<li class="toctree-l1"><a class="reference internal" data-href="Roll-ups.html">Roll-ups</a><ul>
+<li class="toctree-l2"><a class="reference internal" data-href="Roll-ups.html#installing">安装</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="Roll-ups.html#example">例子</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="kairosdevelopment/index.html">Kairos 开发</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kairosdevelopment/Plugins.html">插件</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kairosdevelopment/Plugins.html#plugin-requirements">制作插件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kairosdevelopment/Plugins.html#plugin-loading-process">插件加载过程</a></li>
+<li class="toctree-l1"><a class="reference internal" data-href="kairosdevelopment/index.html">Kairos 开发</a><ul>
+<li class="toctree-l2"><a class="reference internal" data-href="kairosdevelopment/Plugins.html">插件</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="kairosdevelopment/Plugins.html#plugin-requirements">制作插件</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="kairosdevelopment/Plugins.html#plugin-loading-process">插件加载过程</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="kairosdevelopment/CustomData.html">自定义数据</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kairosdevelopment/CustomData.html#steps-for-creating-custom-data-type">创建自定义数据类型的步骤</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kairosdevelopment/CustomData.html#example-for-creating-custom-types">创建自定义数据类型的例子</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="kairosdevelopment/CustomData.html">自定义数据</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="kairosdevelopment/CustomData.html#steps-for-creating-custom-data-type">创建自定义数据类型的步骤</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="kairosdevelopment/CustomData.html#example-for-creating-custom-types">创建自定义数据类型的例子</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="kairosdevelopment/IntelliJSetup.html">用IntelliJ编辑Kairos</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kairosdevelopment/IntelliJSetup.html#import-project">导入project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kairosdevelopment/IntelliJSetup.html#configure-modules">配置 Modules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kairosdevelopment/IntelliJSetup.html#alternative-approach">转换方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kairosdevelopment/IntelliJSetup.html#running-kairos">运行 Kairos</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="restapi/index.html">REST API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="restapi/Overview.html">概览</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Overview.html#what-data-do-i-store">数据该怎么存储</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="restapi/AddDataPoints.html">添加 Data Points( 数据点)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="restapi/AddDataPoints.html#method">方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/AddDataPoints.html#request">请求</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/AddDataPoints.html#body">内容</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/AddDataPoints.html#description">描述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/AddDataPoints.html#response">响应</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="restapi/DeleteDataPoints.html">删除 Data Points( 数据点)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="restapi/DeleteDataPoints.html#method">方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/DeleteDataPoints.html#request">请求</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/DeleteDataPoints.html#body">内容</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/DeleteDataPoints.html#response">响应</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="restapi/DeleteMetric.html">删除 Metric（度量）</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="restapi/DeleteMetric.html#method">  方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/DeleteMetric.html#request"> 请求</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/DeleteMetric.html#body">    内容</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/DeleteMetric.html#response">响应</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="restapi/Health.html">健康检查</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Health.html#status">状态</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Health.html#check">检查</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="restapi/ListMetricNames.html"> Metric 名字列表</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="restapi/ListMetricNames.html#method">  方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/ListMetricNames.html#request"> 请求</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/ListMetricNames.html#body">    内容</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/ListMetricNames.html#response">响应</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="restapi/ListTagNames.html"> Tag 名字列表</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="restapi/ListTagNames.html#method">  方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/ListTagNames.html#request"> 请求</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/ListTagNames.html#body">    内容</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/ListTagNames.html#response">响应</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="restapi/ListTagValues.html"> Tag 值列表</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="restapi/ListTagValues.html#method">  方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/ListTagValues.html#request"> 请求</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/ListTagValues.html#body">    内容</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/ListTagValues.html#response">响应</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="restapi/QueryMetrics.html">查询 Metrics</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#request-methods">请求方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#method"> 方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#request">请求</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#body">内容</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#id1">方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#id2">请求</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#id3">内容</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#query-properties">查询 Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#metric-properties">度量 Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetrics.html#response">响应</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="restapi/Aggregators.html">聚合器</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#aggregator-parameters">聚合器参数</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#range-aggregator">范围聚合</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#average">平均值</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#standard-deviation">标准差</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#count">统计</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#first">第一</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#gaps">差异</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#histogram">直方图</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#last">最后</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#least-squares">最小平方</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#max">最大</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#min">最小</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#percentile">百分比</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#sum">求和</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#diff">微分</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#divide">除</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#rate">比率</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#sampler">采样器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#scale">缩放</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#trim">修剪</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Aggregators.html#save-as"> 另存为</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="restapi/QueryMetricTags.html">查询度量标签</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetricTags.html#filtering">过滤器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetricTags.html#method">方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetricTags.html#request">请求</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetricTags.html#body">内容</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetricTags.html#query-properties">查询 Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetricTags.html#metric-properties">度量 Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/QueryMetricTags.html#response">响应</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="restapi/Roll-ups.html">Roll-ups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="restapi/Roll-ups.html#create-roll-up-task">创建 Roll-up 任务</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#method">方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#request">请求</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#body">内容</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#roll-up-properties">Roll-up Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#response">响应</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="restapi/Roll-ups.html#list-roll-up-tasks"> Roll-up 任务列表</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id1">方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id2">请求</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id3">内容</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id4">响应</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="restapi/Roll-ups.html#get-roll-up-task">获得Roll-up Task</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id5">方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id6">请求</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id7">内容</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id8">响应</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="restapi/Roll-ups.html#delete-roll-up-task">删除 Roll-up Task</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id9"> 方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id10">请求</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id11">内容</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id12">响应</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="restapi/Roll-ups.html#update-roll-up-task">更新 Roll-up Task</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id13">方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id14">请求</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id15">内容</a></li>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Roll-ups.html#id16">响应</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="restapi/Version.html">版本</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="restapi/Version.html#method"> 方法</a></li> 
-<li class="toctree-l3"><a class="reference internal" href="restapi/Version.html#request">请求</a></li> 
-<li class="toctree-l3"><a class="reference internal" href="restapi/Version.html#body">   内容</a></li> 
-<li class="toctree-l3"><a class="reference internal" href="restapi/Version.html#response">响应</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="kairosdevelopment/IntelliJSetup.html">用IntelliJ编辑Kairos</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="kairosdevelopment/IntelliJSetup.html#import-project">导入project</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="kairosdevelopment/IntelliJSetup.html#configure-modules">配置 Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="kairosdevelopment/IntelliJSetup.html#alternative-approach">转换方法</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="kairosdevelopment/IntelliJSetup.html#running-kairos">运行 Kairos</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="telnetapi/index.html">Telnet API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="telnetapi/Overview.html">概览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="telnetapi/Put.html">推</a></li>
-<li class="toctree-l2"><a class="reference internal" href="telnetapi/Putm.html">推(毫秒级)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="telnetapi/Version.html">版本</a></li>
+<li class="toctree-l1"><a class="reference internal" data-href="restapi/index.html">REST API</a><ul>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/Overview.html">概览</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Overview.html#what-data-do-i-store">数据该怎么存储</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Graphite.html">Graphite 协议</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Graphite.html#enabling-graphite-protocol">打开 Graphite 协议</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Graphite.html#configuring-graphite-protocol">配置 Graphite 协议</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Graphite.html#custom-tag-parser">自定义标签解析</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/AddDataPoints.html">添加 Data Points( 数据点)</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/AddDataPoints.html#method">方法</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/AddDataPoints.html#request">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/AddDataPoints.html#body">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/AddDataPoints.html#description">描述</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/AddDataPoints.html#response">响应</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="IssueTracking.html">Bug 追踪</a></li>
-<li class="toctree-l1"><a class="reference internal" href="External.html">扩展</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="External.html#kairosdb-plugins">KairosDB 插件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="External.html#client-libraries">客户端库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="External.html#collector-libraries">收集器库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="External.html#visualization-tools">可视化工具</a></li>
-<li class="toctree-l2"><a class="reference internal" href="External.html#business-intelligence-reporting">BI商业智能 &amp; 报表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="External.html#papers-about-kairosdb">关于KairosDB的文章</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/DeleteDataPoints.html">删除 Data Points( 数据点)</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/DeleteDataPoints.html#method">方法</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/DeleteDataPoints.html#request">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/DeleteDataPoints.html#body">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/DeleteDataPoints.html#response">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/DeleteMetric.html">删除 Metric（度量）</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/DeleteMetric.html#method">  方法</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/DeleteMetric.html#request"> 请求</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/DeleteMetric.html#body">    内容</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/DeleteMetric.html#response">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/Health.html">健康检查</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Health.html#status">状态</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Health.html#check">检查</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/ListMetricNames.html"> Metric 名字列表</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/ListMetricNames.html#method">  方法</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/ListMetricNames.html#request"> 请求</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/ListMetricNames.html#body">    内容</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/ListMetricNames.html#response">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/ListTagNames.html"> Tag 名字列表</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/ListTagNames.html#method">  方法</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/ListTagNames.html#request"> 请求</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/ListTagNames.html#body">    内容</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/ListTagNames.html#response">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/ListTagValues.html"> Tag 值列表</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/ListTagValues.html#method">  方法</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/ListTagValues.html#request"> 请求</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/ListTagValues.html#body">    内容</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/ListTagValues.html#response">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/QueryMetrics.html">查询 Metrics</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/QueryMetrics.html#request-methods">请求方法</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/QueryMetrics.html#method"> 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/QueryMetrics.html#request">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/QueryMetrics.html#body">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/QueryMetrics.html#id1">方法</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/QueryMetrics.html#id2">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/QueryMetrics.html#id3">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/QueryMetrics.html#query-properties">查询 Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/QueryMetrics.html#metric-properties">度量 Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/QueryMetrics.html#response">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/Aggregators.html">聚合器</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#aggregator-parameters">聚合器参数</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#range-aggregator">范围聚合</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#average">平均值</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#standard-deviation">标准差</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#count">统计</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#first">第一</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#gaps">差异</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#histogram">直方图</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#last">最后</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#least-squares">最小平方</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#max">最大</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#min">最小</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#percentile">百分比</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#sum">求和</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#diff">微分</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#divide">除</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#rate">比率</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#sampler">采样器</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#scale">缩放</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#trim">修剪</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Aggregators.html#save-as"> 另存为</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/QueryMetricTags.html">查询度量标签</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/QueryMetricTags.html#filtering">过滤器</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/QueryMetricTags.html#method">方法</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/QueryMetricTags.html#request">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/QueryMetricTags.html#body">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/QueryMetricTags.html#query-properties">查询 Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/QueryMetricTags.html#metric-properties">度量 Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/QueryMetricTags.html#response">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/Roll-ups.html">Roll-ups</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/Roll-ups.html#create-roll-up-task">创建 Roll-up 任务</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#method">方法</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#request">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#body">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#roll-up-properties">Roll-up Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#response">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/Roll-ups.html#list-roll-up-tasks"> Roll-up 任务列表</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#id1">方法</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#id2">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#id3">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#id4">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/Roll-ups.html#get-roll-up-task">获得Roll-up Task</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#id5">方法</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#id6">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#id7">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#id8">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/Roll-ups.html#delete-roll-up-task">删除 Roll-up Task</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#id9"> 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#id10">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#id11">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#id12">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/Roll-ups.html#update-roll-up-task">更新 Roll-up Task</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#id13">方法</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#id14">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#id15">内容</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Roll-ups.html#id16">响应</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" data-href="restapi/Version.html">版本</a><ul>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Version.html#method"> 方法</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Version.html#request">请求</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Version.html#body">   内容</a></li>
+<li class="toctree-l3"><a class="reference internal" data-href="restapi/Version.html#response">响应</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" data-href="telnetapi/index.html">Telnet API</a><ul>
+<li class="toctree-l2"><a class="reference internal" data-href="telnetapi/Overview.html">概览</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="telnetapi/Put.html">推</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="telnetapi/Putm.html">推(毫秒级)</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="telnetapi/Version.html">版本</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" data-href="Graphite.html">Graphite 协议</a><ul>
+<li class="toctree-l2"><a class="reference internal" data-href="Graphite.html#enabling-graphite-protocol">打开 Graphite 协议</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="Graphite.html#configuring-graphite-protocol">配置 Graphite 协议</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="Graphite.html#custom-tag-parser">自定义标签解析</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" data-href="IssueTracking.html">Bug 追踪</a></li>
+<li class="toctree-l1"><a class="reference internal" data-href="External.html">扩展</a><ul>
+<li class="toctree-l2"><a class="reference internal" data-href="External.html#kairosdb-plugins">KairosDB 插件</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="External.html#client-libraries">客户端库</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="External.html#collector-libraries">收集器库</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="External.html#visualization-tools">可视化工具</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="External.html#business-intelligence-reporting">BI商业智能 &amp; 报表</a></li>
+<li class="toctree-l2"><a class="reference internal" data-href="External.html#papers-about-kairosdb">关于KairosDB的文章</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
+    <!--目录结束正文开始-->
+
+        <!--第一节-->
+        <div class="section" id="getting-started">
+            <h1>入门指南<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+            <div class="section" id="install">
+                <h2>安装<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
+                <p>KairosDB 运行在java1.6及以上版本</p>
+                <blockquote>
+                    <div><ol class="arabic simple">
+                        <li>下载 tar.gz 文件 从官网下载地址</li>
+                        <li>解压到你想存放的地方</li>
+                        <li>在 conf/kairosdb.properties 修改  kairosdb.service.datastore 属性为您想使用的数据存储方式.  默认使用基于内存存储的H2数据库(这是慢的 退出后数据会丢失)</li>
+                        <li>确保已经正确安装jdk并且设置JAVA_HOME</li>
+                        <li>切换到bin目录并且运行 <tt class="docutils literal"><span class="pre">&gt;./kairosdb.sh</span> <span class="pre">run</span></tt></li>
+                    </ol>
+                    </div></blockquote>
+                <div class="section" id="changing-file-handle-limit-on-linux">
+                    <h3>修改linux文件打开上限(如果已修改可以忽略这步)<a class="headerlink" href="#changing-file-handle-limit-on-linux" title="Permalink to this headline">¶</a></h3>
+                    <p>如果你有很多的客户端推送度量数据,这可能会耗尽系统的打开文件句柄。我们建议增加文件句柄的数量。这是一个例子 [<a class="reference external" href="http://tech-torch.blogspot.com/2009/07/linux-ubuntu-tomcat-too-many-open-files.html">http://tech-torch.blogspot.com/2009/07/linux-ubuntu-tomcat-too-many-open-files.html</a> 修改CentOS的文件打开上限].</p>
+                </div>
+                <div class="section" id="changing-datastore">
+                    <h3>更改数据存储方式<a class="headerlink" href="#changing-datastore" title="Permalink to this headline">¶</a></h3>
+                    <p>KairosDB 可以配置使用一个后端存储引擎作为数据持久化方式.  KairosDB默认使用H2内存数据库存储datapoints(数据点).  改变所使用的数据存储方式 <tt class="docutils literal"><span class="pre">kairosdb.service.datastore</span></tt> 属性 在kairosdb.properties 文件中.</p>
+                </div>
+                <div class="section" id="using-with-h2">
+                    <h3>使用H2<a class="headerlink" href="#using-with-h2" title="Permalink to this headline">¶</a></h3>
+                    <p><tt class="docutils literal"><span class="pre">kairosdb.service.datastore=org.kairosdb.datastore.h2.H2Module</span></tt></p>
+                    <p>KairosDB默认使用H2内存数据库存储 这允许你做开发工作时在没有设置数据存储为Cassandra或者HBase的情况下能直接运行</p>
+                    <div class="section" id="configuration-options">
+                        <h4>配置项<a class="headerlink" href="#configuration-options" title="Permalink to this headline">¶</a></h4>
+                        <table border="1" class="docutils">
+                            <colgroup>
+                                <col width="58%" />
+                                <col width="42%" />
+                            </colgroup>
+                            <tbody valign="top">
+                            <tr class="row-odd"><td>kairosdb.datastore.h2.database_path</td>
+                                <td>h2数据文件的地址</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p>删除和重新启动kairosdb数据库文件夹将导致重新创建数据库，其中没有数据</p>
+                    </div>
+                </div>
+                <div class="section" id="using-with-cassandra">
+                    <h3>使用Cassandra<a class="headerlink" href="#using-with-cassandra" title="Permalink to this headline">¶</a></h3>
+                    <p><tt class="docutils literal"><span class="pre">kairosdb.service.datastore=org.kairosdb.datastore.cassandra.CassandraModule</span></tt></p>
+                    <p>使用Cassandra的默认配置是使用行存储数据。每一行将包含3周的数据。 设置为3周的原因是如果你每毫秒写入一个度量指标，3周刚好超过10亿列。  Cassandra有20亿个列的限制。</p>
+                    <p>行大小一直有些困惑。基本上它可以归结为这样: 更多的数据可以存入一行以便更好的进行数据查询。  但这并不意味着cassandra只支持保存3周的数据, 这意味着数据写入同一行每3周新的数据去保存到下一个新行。  参见[CassandraSchema cassandra schema for more details].</p>
+                    <p>更改 read_repair_chance:  这个值告诉cassandra多久执行一个读修复。 读修复机会将默认为1(100% ).  推荐值为0.1 (10% ).  改变方法运行cassandra-cli 并执行以下命令</p>
+                    <div class="highlight-python"><div class="highlight"><pre>&gt; use kairosdb;
+&gt; update column family data_points with read_repair_chance = 0.1;
+&gt; update column family row_key_index with read_repair_chance = 0.1;
+&gt; update column family string_index with read_repair_chance = 0.1;
+</pre></div>
+                    </div>
+                    <div class="section" id="id1">
+                        <h4>配置项<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+                        <p>对于选项的完整列表,请参见cassandra部分在 kairosdb.properties.</p>
+                        <table border="1" class="docutils">
+                            <colgroup>
+                                <col width="17%" />
+                                <col width="83%" />
+                            </colgroup>
+                            <tbody valign="top">
+                            <tr class="row-odd"><td>kairosdb.datastore.cassandra.host_name</td>
+                                <td> Cassandra 服务器的主机名或者ip地址</td>
+                            </tr>
+                            <tr class="row-even"><td>kairosdb.datastore.cassandra.port</td>
+                                <td>Cassandra 端口号</td>
+                            </tr>
+                            <tr class="row-odd"><td>kairosdb.datastore.cassandra.replication_factor</td>
+                                <td>写数据到Cassandra的复制因子 [<a class="reference external" href="http://www.datastax.com/docs/1.0/cluster_architecture/replication">http://www.datastax.com/docs/1.0/cluster_architecture/replication</a> 查看更多]</td>
+                            </tr>
+                            <tr class="row-even"><td>kairosdb.datastore.cassandra.write_delay</td>
+                                <td>在写数据到Cassandra时的后台线程等待的时间。这允许批处理数据到数据存储组件中</td>
+                            </tr>
+                            <tr class="row-odd"><td>kairosdb.datastore.cassandra.single_row_read_size</td>
+                                <td>列数读的时候读一行。  这是一个平衡性能和内存使用的配置。 这个值时使用查询row key索引和执行后续查询时一行在最初的多。 </td>
+                            </tr>
+                            <tr class="row-even"><td>kairosdb.datastore.cassandra.multi_row_read_size</td>
+                                <td>The number of columns read on the initial multi get for a query.  If your data has very few tags make this number big.  If your metrics have lots of tag combinations then back this number down or you may run into out of memory issues.</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="section" id="configuring-hbase">
+                    <h3>配置 HBase<a class="headerlink" href="#configuring-hbase" title="Permalink to this headline">¶</a></h3>
+                    <p>HBase 基本不再支持。 (由于历史遗留原因这里也不在翻译) Originally the HBase support was achieved by forking the OpenTSDB code base and making it into a Datastore plugin for KairosDB.  The functionality of KairosDB has moved beyond what HBase code can support.</p>
+                </div>
+                <div class="section" id="using-as-a-remote-datastore">
+                    <h3>使用远程数据存储<a class="headerlink" href="#using-as-a-remote-datastore" title="Permalink to this headline">¶</a></h3>
+                    <p><tt class="docutils literal"><span class="pre">kairosdb.service.datastore=org.kairosdb.datastore.remote.RemoteModule</span></tt></p>
+                    <p>作为远程数据存储设置本地Kairos实例，存储和转发传入的数据点到远程Kairos服务器。数据存储在一个目录使用json格式 在一个可配置的后台调度线程上将压缩数据上传到远程Kairos数据库实例。</p>
+                    <div class="section" id="id2">
+                        <h4>配置项<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+                        <table border="1" class="docutils">
+                            <colgroup>
+                                <col width="29%" />
+                                <col width="71%" />
+                            </colgroup>
+                            <tbody valign="top">
+                            <tr class="row-odd"><td>kairosdb.datastore.remote.data_dir</td>
+                                <td>Directory in which the data points are collected.  Defaults to the current directory.</td>
+                            </tr>
+                            <tr class="row-even"><td>kairosdb.datastore.remote.remote_url</td>
+                                <td>URL of the KairosDB instance to which data will be forwarded.  Ex. <a class="reference external" href="http://10.10.10.10:8080">http://10.10.10.10:8080</a></td>
+                            </tr>
+                            <tr class="row-odd"><td>kairosdb.datastore.remote.schedule</td>
+                                <td>Quartz cron schedule for how often to upload collected data.</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="starting-and-stopping">
+                <h2>启动和停止<a class="headerlink" href="#starting-and-stopping" title="Permalink to this headline">¶</a></h2>
+                <p>在bin目录中 启动和停止是通过运行kairosdb.sh脚本。</p>
+                <p>启动作为前台进程 命令行退出即程序退出</p>
+                <div class="highlight-python"><div class="highlight"><pre>&gt; ./kairosdb.sh run
+</pre></div>
+                </div>
+                <p>启动作为后台进程</p>
+                <div class="highlight-python"><div class="highlight"><pre>&gt; ./kairosdb.sh start
+</pre></div>
+                </div>
+                <p>停止正在运行的后台进程</p>
+                <div class="highlight-python"><div class="highlight"><pre>&gt; ./kairosdb.sh stop
+</pre></div>
+                </div>
+            </div>
+        </div>
+        <!--第二节-->
+        <div class="section" id="frequently-asked-questions">
+            <h1>常见问答<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
+            <div class="section" id="why-would-i-pre-aggregate">
+                <h2>我为什么要预聚合?<a class="headerlink" href="#why-would-i-pre-aggregate" title="Permalink to this headline">¶</a></h2>
+                <p>假设你有一个图形数据显示每1小时的平均数据在一个星期。你更新这张图一天几次,每一次你的代码查询一周的数据总量。每次运行该查询时你将重新处理99%的相同的数据，处理你最后一次运行查询，可以做些什么?</p>
+                <p>这里有一些策略:</p>
+                <ol class="arabic simple">
+                    <li>预聚合数据在写入的数据之前。
+                        这里的挑战是,并不是所有的数据是通过相同的K*节点。
+                        在负载均衡系统传入数据分布在几个K节点,K节点进行实时聚合.</li>
+                    <li>只查询新数据。 这里的考虑是,你的可视化工具是足够聪明的，只查询新的数据合并成图。  Cubism.js 是一个声称这样的功能的工具.</li>
+                    <li>批处理预聚合作业并写入到一个新的metric度量指标.  这个新的 metric 可以查询和用于生成图像数据。
+                        这将通过定时任务。  有一些讨论使K的批处理作业的一部分,但有工作要做在此之前可能发生.</li>
+                </ol>
+                <p>其他常见问题可以在这里找到: <a class="reference external" href="https://github.com/kairosdb/kairosdb/wiki/Frequently-Asked-Questions">https://github.com/kairosdb/kairosdb/wiki/Frequently-Asked-Questions</a></p>
+            </div>
+        </div>
+        <!--第三节-->
+        <div class="section" id="pushing-data">
+            <h1>推送数据到kairosDB<a class="headerlink" href="#pushing-data" title="Permalink to this headline">¶</a></h1>
+            <p>您可以提交数据使用telnet协议在4242端口上 或者 通过HTTP REST协议在8080端口上 (这是默认的端口，可以在 kairosdb.properties 中修改).  还有其他的数据推送机制 可以在插件的列表和外部项目上找到 <a class="reference external" href="https://github.com/proofpoint/kairosdb/wiki/External-projects,-libraries-and-stuff.">拓展页面</a>.</p>
+            <blockquote>
+                <div><strong>注意:</strong>两个默认协议只有http rest协议可以处理自定义数据类型</div></blockquote>
+            <p>者是一个不错的客户端可以测试rest协议 [<a class="reference external" href="http://code.google.com/p/rest-client/">http://code.google.com/p/rest-client/</a>]</p>
+            <div class="section" id="submitting-data-via-telnet">
+                <h2>通过telnet提交数据（此方式不重要省略翻译）<a class="headerlink" href="#submitting-data-via-telnet" title="Permalink to this headline">¶</a></h2>
+                <p>The format of the data is</p>
+                <div class="highlight-python"><div class="highlight"><pre>put &lt;metric name&gt; &lt;time stamp&gt; &lt;value&gt; &lt;tag&gt; &lt;tag&gt;... \n
+</pre></div>
+                </div>
+                <p><strong>Metric name</strong> must be one word and is limited to alpha numerics with &#8220;-_.&#8221;.</p>
+                <p><strong>Time stamp</strong> can either be in milliseconds or in seconds since Jan 1, 1970 (unix epoch) - seconds are for backwards compatibility with the original opentsdb.  The Cassandra datastore supports milliseconds.</p>
+                <blockquote>
+                    <div><strong>注意:</strong> REST API只支持一个以毫秒为单位的时间戳。</div></blockquote>
+                <p><strong>Value</strong> can either be a long or double value.</p>
+                <p><strong>Tag</strong> is in the form of key=value.</p>
+                <p>Be aware that the data sent must be followed by a line feed character.</p>
+                <p>Here is a simple shell script that inserts data using netcat.</p>
+                <div class="highlight-bash"><div class="highlight"><pre><span class="c">#!/bin/bash</span>
+
+<span class="c"># Current time in milliseconds</span>
+<span class="nv">now</span><span class="o">=</span><span class="k">$(($(</span>date +%s%N<span class="k">)</span><span class="o">/</span><span class="m">1000000</span><span class="k">))</span>
+<span class="nv">metric</span><span class="o">=</span>load_value_test
+<span class="nv">value</span><span class="o">=</span>42
+<span class="nv">host</span><span class="o">=</span>10.92.4.4
+
+<span class="nb">echo</span> <span class="s2">&quot;put $metric $now $value host=A&quot;</span> | nc -w 30 <span class="nv">$host</span> 4242
+</pre></div>
+                </div>
+            </div>
+            <div class="section" id="submitting-data-via-rest">
+                <h2>通过rest API<a class="headerlink" href="#submitting-data-via-rest" title="Permalink to this headline">¶</a></h2>
+                <p>提交数据的地址像是这样的 <a class="reference external" href="http://localhost:8080/api/v1/datapoints">http://localhost:8080/api/v1/datapoints</a></p>
+                <div class="highlight-json"><div class="highlight"><pre><span class="p">[{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;archive.file.tracked&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1349109376</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;long&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span>
+    <span class="nt">&quot;tags&quot;</span><span class="p">:{</span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="s2">&quot;test&quot;</span><span class="p">}</span>
+<span class="p">},</span>
+<span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;archive.file.search&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">999</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;double&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mf">32.1</span><span class="p">,</span>
+    <span class="nt">&quot;tags&quot;</span><span class="p">:{</span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="s2">&quot;test&quot;</span><span class="p">}</span>
+<span class="p">}]</span>
+</pre></div>
+                </div>
+                <p>rest api的时间戳总是为从1970年1月1日开始的毫秒时间。  如果后端存储选择使用HBase您需要自行截断时间到秒级。</p>
+                <p>参看 <a class="reference internal" href="restapi/AddDataPoints.html"><em>REST API documentation</em></a> 获得更多信息</p>
+            </div>
+            <!--graphite-protocol冲突修改为graphite-protocol1-->
+            <div class="section" id="graphite-protocol1">
+                <h2>Graphite 协议（与Graphite集成时使用这里暂不翻译）<a class="headerlink" href="#graphite-protocol" title="Permalink to this headline">¶</a></h2>
+                <p>KairosDB now supports the Graphite plaintext and pickle protocol as explained <a class="reference external" href="https://graphite.readthedocs.org/en/latest/feeding-carbon.html">here</a>.  This lets you integrate KairosDB with existing applications that push data to Graphite.  Please see the <a class="reference external" href="https://github.com/proofpoint/kairosdb/wiki/External-projects,-libraries-and-stuff.">external projects page</a> for a link to the plugin.</p>
+            </div>
+        </div>
+        <!--第四节-->
+        <div class="section" id="querying-data">
+            <h1>查询数据<a class="headerlink" href="#querying-data" title="Permalink to this headline">¶</a></h1>
+            <p>使用http rest查询数据 url格式为<a class="reference external" href="http://localhost:8080/api/v1/datapoints/query">http://localhost:8080/api/v1/datapoints/query</a></p>
+            <p>通过绝对日期时间获得数据</p>
+            <div class="highlight-json"><div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;start_absolute&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;metrics&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;archive.file.tracked&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+            </div>
+            <p>通过相对日期时间获得数据</p>
+            <div class="highlight-json"><div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;start_relative&quot;</span><span class="p">:{</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="nt">&quot;unit&quot;</span><span class="p">:</span><span class="s2">&quot;weeks&quot;</span><span class="p">},</span>
+  <span class="nt">&quot;metrics&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;archive.file.tracked&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+            </div>
+            <p>你也可以指定一个end_absolute 和 end_relative以相同的格式开始。如果最终没有指定则被认为是现在结束。</p>
+            <p>请参阅<a class="reference internal" href="restapi/QueryMetrics.html"><em>REST API documentation</em></a> 文档</p>
+        </div>
+        <!--第五节-->
+        <div class="section" id="importing-and-exporting-data">
+            <h1>导入导出数据<a class="headerlink" href="#importing-and-exporting-data" title="Permalink to this headline">¶</a></h1>
+            <p>在KairosDB 服务器上导入和导出可以使用命令行</p>
+            <div class="section" id="exporting-data">
+                <h2>导出数据<a class="headerlink" href="#exporting-data" title="Permalink to this headline">¶</a></h2>
+                <p>导出数据运行以下命令:</p>
+                <div class="highlight-python"><div class="highlight"><pre>&gt; bin/kairosdb.sh export -f export.txt
+</pre></div>
+                </div>
+                <p>导出格式是以每行一个metric度量为格式导出的，每行是一个json对象。  这可以很详细,它可以让你导出数据后做一些事情。 如果数据大小是一个问题可以用以下命令:</p>
+                <div class="highlight-python"><div class="highlight"><pre>&gt; bin/kairosdb.sh export | gzip &gt; export.gz
+</pre></div>
+                </div>
+                <div class="section" id="export-switches">
+                    <h3>导出选择<a class="headerlink" href="#export-switches" title="Permalink to this headline">¶</a></h3>
+                    <p>-f <cite>&lt;filename&gt;</cite> &#8211; 输出到指定文件。如果没有指定,输出到标准输出。</p>
+                    <p>-n <cite>&lt;metricName&gt;</cite> &#8211; 指定导出的metric（度量）名称. 如果没有指定,那么所有metric度量都将导出。</p>
+                </div>
+            </div>
+            <div class="section" id="importing-data">
+                <h2>导入数据<a class="headerlink" href="#importing-data" title="Permalink to this headline">¶</a></h2>
+                <p>导入数据在下面的步骤中你可以这样做:</p>
+                <div class="highlight-python"><div class="highlight"><pre>&gt; bin/kairosdb.sh import -f export.txt
+</pre></div>
+                </div>
+                <p>如果你使用压缩导出，你可以使用系统的管道机制</p>
+                <div class="highlight-python"><div class="highlight"><pre>&gt; gzip -dc export.gz | bin/kairosdb.sh import
+</pre></div>
+                </div>
+                <div class="section" id="import-switches">
+                    <h3>导入选择<a class="headerlink" href="#import-switches" title="Permalink to this headline">¶</a></h3>
+                    <p>-f <cite>&lt;filename&gt;</cite> &#8211; 从指定文件导入。如果没有指定,则从标准输入导入。</p>
+                </div>
+            </div>
+            <div class="section" id="performance-numbers">
+                <h2>性能数据<a class="headerlink" href="#performance-numbers" title="Permalink to this headline">¶</a></h2>
+                <p>这是导入过程的性能数据</p>
+                <p>机器配置: Intel i5 (4 cores) 12 Gigs ram.  这台机器有两个驱动器 一个是 SSD 另一个是传统磁盘.  Cassandra (单实例) 和 KairosDB 运行在同一台机器上.</p>
+                <p>数据有:  31,341,782 metrics, 其中大部分是相同的metric（度量）和标签, 这意味着它将写入在一行。</p>
+                <p>结果</p>
+                <table border="1" class="docutils">
+                    <colgroup>
+                        <col width="24%" />
+                        <col width="49%" />
+                        <col width="27%" />
+                    </colgroup>
+                    <tbody valign="top">
+                    <tr class="row-odd"><td>Cassandra 内存</td>
+                        <td>数据的位置</td>
+                        <td>每秒Metrics </td>
+                    </tr>
+                    <tr class="row-even"><td>1 Gig</td>
+                        <td>数据和提交的日志都在 SSD</td>
+                        <td>74,623</td>
+                    </tr>
+                    <tr class="row-odd"><td>1 Gig</td>
+                        <td>数据在磁盘,提交的日志在SSD</td>
+                        <td>93,837</td>
+                    </tr>
+                    <tr class="row-even"><td>2 Gig</td>
+                        <td>数据在磁盘,提交的日志在SSD</td>
+                        <td>132,804</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--第六节-->
+        <div class="section" id="web-ui">
+            <h1>Web UI<a class="headerlink" href="#web-ui" title="Permalink to this headline">¶</a></h1>
+            <p>KairosDB 的web ui在webroot目录下 ,默认是已安装的，可以通过浏览区输入 <cite>http://localhost:8080</cite> 它提供一个查询页面,您可以查询数据存储中的数据.</p>
+            <p>UI界面主要是为开发考虑的 你点击查询后，将显示查询结果图.</p>
+            <p>默认的UI界面使用了<a class="reference external" href="http://www.flotcharts.org/">Flot</a> 创建图表 因为它&#8217;是一个开源项目. 如果您更愿意使用 <a class="reference external" href="http://www.highcharts.com/Highcharts">Highcharts</a> 你可以这么做:</p>
+            <ol class="arabic simple">
+                <li>下载 highcharts到存到webroot/js 目录下.</li>
+                <li>取消注释在webroot/index.html 中的highcharts.js .</li>
+                <li>取消注释在 webroot/view.html 中的highcharts.js .</li>
+            </ol>
+        </div>
+        <!--第七节-->
+        <div class="section" id="configuration">
+            <h1>配置<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+            <p>KairosDB 使用conf目录下的 kairosdb.properties 文件配置.</p>
+            <p>这里列出的属性和它们的作用</p>
+            <table border="1" class="scrollwide docutils">
+                <colgroup>
+                    <col width="10%" />
+                    <col width="47%" />
+                    <col width="15%" />
+                    <col width="28%" />
+                </colgroup>
+                <thead valign="bottom">
+                <tr class="row-odd"><th class="head"><em>Property</em></th>
+                    <th class="head"><em>描述</em></th>
+                    <th class="head"><em>是否必须</em></th>
+                    <th class="head"><em>默认值</em></th>
+                </tr>
+                </thead>
+                <tbody valign="top">
+                <tr class="row-even"><td>kairosdb.hostname</td>
+                    <td>报告kairosdb内部指标时使用的主机名</td>
+                    <td>可选</td>
+                    <td>The &#8220;hostname&#8221; command is used if this is not set</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.telnetserver.address</td>
+                    <td>IPv4或 IPv6 地址 (参看Java&#8217;s InetAddress 类获得更多信息)</td>
+                    <td>必须</td>
+                    <td>0.0.0.0</td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.telnetserver.port</td>
+                    <td>Telnet端口号</td>
+                    <td>必须</td>
+                    <td>4242</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.telnetserver.commands</td>
+                    <td> 支持的Telnet命令列表.</td>
+                    <td>必须</td>
+                    <td>put, version</td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.service.telnet</td>
+                    <td>处理远程登录请求的完整的包和类名的类。</td>
+                    <td>必须</td>
+                    <td><cite>org.kairosdb.core.telnet.TelnetServerModule</cite></td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.service.http</td>
+                    <td>处理HTTP请求的完整的包和类名的类.</td>
+                    <td>必须</td>
+                    <td><cite>org.kairosdb.core.http.WebServletModule</cite></td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.service.reporter</td>
+                    <td>处理内部度量报告的完整的包和类名的类 如果不指定,kairosdb内部度量指标将不被存储</td>
+                    <td>可选</td>
+                    <td><cite>org.kairosdb.core.reporting.MetricReportingModule</cite></td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.reporter.period</td>
+                    <td>内部度量报告周期  结合 kairosdb.reporter.period_unit使用.</td>
+                    <td> 需要kairosdb.service.reporter同时配置 </td>
+                    <td>1</td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.reporter.period_unit</td>
+                    <td>与 kairosdb.reporter.period一起使用.单位可以是milliseconds, seconds, minutes, days</td>
+                    <td>需要kairosdb.service.reporter 同时配置.</td>
+                    <td>minutes</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.jetty.address</td>
+                    <td>IPv4 或者 IPv6 地址 (参看 Java&#8217;s InetAddress 类获得详细信息).</td>
+                    <td>必须</td>
+                    <td>0.0.0.0</td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.jetty.port</td>
+                    <td>访问KairosDB UI端口号.禁用HTTP端口设置为0.</td>
+                    <td>可选. 必须设置这个或者设置 kairosdb.jetty.ssl.port.</td>
+                    <td>8080</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.jetty.static_web_root</td>
+                    <td>页面在服务器的位置。</td>
+                    <td>必须</td>
+                    <td>webroot</td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.jetty.basic_auth.user</td>
+                    <td>http访问基本认证用户名</td>
+                    <td>可选</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.jetty.basic_auth.password</td>
+                    <td>http访问基本认证密码.</td>
+                    <td>可选</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.jetty.ssl.port</td>
+                    <td>SSL端口号.</td>
+                    <td>可选</td>
+                    <td>443</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.jetty.ssl.keystore.path</td>
+                    <td>包含SSL通信的服务器证书的完整路径密钥存储库。 这个实现SSL假定只有一个证书的密钥存储库中.</td>
+                    <td>可选</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.jetty.ssl.keystore.password</td>
+                    <td>Key store 密码.</td>
+                    <td>需要kairosdb.jetty.ssl.keystore.path也设置.</td>
+                    <td>参看 <a class="reference external" href="http://wiki.eclipse.org/Jetty/Howto/Configure_SSL#Loading_Keys_and_Certificates_via_PKCS12">Jetty</a> documentation for information on creating the keystore.</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.jetty.ssl.protocols</td>
+                    <td>是否开启ssl.</td>
+                    <td>可选</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.jetty.ssl.cipherSuites</td>
+                    <td>支持SSL的密码套件。</td>
+                    <td>可选</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.jetty.threads.queue_size</td>
+                    <td>jetty队列的容量。 参看 Jetty&#8217;s ExecutorThreadPool 使用LinkedBlockingQueue</td>
+                    <td>Required if any kairosdb.jetty.threads property is specified</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.jetty.threads.min</td>
+                    <td>线程池中的最小线程数,即使他们处于空闲状态。 参看Jetty&#8217;s ExecutorThreadPool using a LinkedBlockingQueue</td>
+                    <td>Required if any kairosdb.jetty.threads property is specified</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.jetty.threads.max</td>
+                    <td>线程池中的最大线程数,参看 Jetty&#8217;s ExecutorThreadPool using a LinkedBlockingQueue</td>
+                    <td>Required if any kairosdb.jetty.threads property is specified</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.jetty.threads.keep_alive_ms</td>
+                    <td>一个线程可以保持空闲的最大时间,以毫秒为单位。参看 Jetty&#8217;s ExecutorThreadPool using a LinkedBlockingQueue</td>
+                    <td>Required if any kairosdb.jetty.threads property is specified</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.service.datastore</td>
+                    <td>处理数据存储请求的完整的包和类名的类</td>
+                    <td><cite>org.kairosdb.datastore.h2.H2Module</cite> or <cite>org.kairosdb.datastore.cassandra.CassandraModule</cite></td>
+                    <td><cite>org.kairosdb.datastore.h2.H2Module</cite> or <cite>net.opentsdb.kairosdb.HBaseModule</cite></td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.datastore.h2.database_path</td>
+                    <td>h2数据库文件地址</td>
+                    <td>如果配置了使用h2存储则生效</td>
+                    <td>build/h2db</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.datastore.cassandra.host_list</td>
+                    <td>Cassandra的节点列表.以1.1.1.1:9160,1.1.1.2:9160的形式</td>
+                    <td>如果配置了使用Cassandra存储则生效</td>
+                    <td>localhost:9160</td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.datastore.cassandra.replication_factor</td>
+                    <td>Cassandra 复制因子.</td>
+                    <td>如果配置了使用Cassandra存储则生效</td>
+                    <td>1</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.datastore.cassandra.write_delay</td>
+                    <td>写入Cassandra之前的缓存时间.</td>
+                    <td>如果配置了使用Cassandra存储则生效</td>
+                    <td>1000</td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.datastore.cassandra.write_buffer_max_size</td>
+                    <td>写缓存的最大大小。当缓存已满数据写入.</td>
+                    <td>如果配置了使用Cassandra存储则生效</td>
+                    <td>500000</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.datastore.cassandra.single_row_read_size</td>
+                    <td>从Cassandra读取一行记录时的缓冲区大小.</td>
+                    <td>如果配置了使用Cassandra存储则生效</td>
+                    <td>10240</td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.datastore.cassandra.multi_row_read_size</td>
+                    <td>从Cassandra读取多行记录时的缓冲区大小.</td>
+                    <td>如果配置了使用Cassandra存储则生效</td>
+                    <td>1024</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.datastore.cassandra.auth.`[prop name]`</td>
+                    <td>用来传输cassandra认证信息.例如<cite>kairosdb.datastore.cassandra.auth.user=admin</cite></td>
+                    <td>可选</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.datastore.cassandra.increase_buffer_size_schedule</td>
+                    <td>如果Cassandra响应异常, KairosDB 将减少写缓冲区大小。. 这个属性标识kairosdb将试图增加缓冲区大小 它是 kairosdb.datastore.cassandra.write_buffer_max_size的备份. 使用 Quartz Cron 规则.</td>
+                    <td>如果配置了使用Cassandra存储则生效</td>
+                    <td>0 */5 * * * ?</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.datastore.cassandra.datapoint_ttl</td>
+                    <td>Default TTL in seconds for data points stored in Cassandra if it isn&#8217;t set in the data point itself.</td>
+                    <td>可选</td>
+                    <td>0 (forever)</td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.datastore.hbase.timeseries_table</td>
+                    <td>Name of the HBase table metrics are stored in.</td>
+                    <td>Required if HBase is the selected datastore.</td>
+                    <td>tsdb</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.datastore.hbase.uinqueids_table</td>
+                    <td>Name of the id table for HBase.</td>
+                    <td>Required if HBase is the selected datastore.</td>
+                    <td>tsdb-uid</td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.datastore.hbase.zoo_keeper_quorum</td>
+                    <td>Zookeeper quorum host.</td>
+                    <td>Required if HBase is the selected datastore.</td>
+                    <td>localhost</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.datastore.hbase.zoo_keeper_base_dir</td>
+                    <td>Zookeeper base directory.</td>
+                    <td>Required if using HBase with Zookeeper.</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.datastore.hbase.auto_create_metrics</td>
+                    <td>If true, new metric names are created if they don&#8217;t exist. If false, metrics with new metric names are rejected.</td>
+                    <td>Required if HBase is the selected datastore.</td>
+                    <td>true</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.service.oauth</td>
+                    <td>处理身份验证通信的完整的包和类的名称类。</td>
+                    <td>可选</td>
+                    <td><cite>org.kairosdb.core.oauth.OAuthModule</cite></td>
+                </tr>
+                <tr class="row-even"><td>kairosdb.oauth.consumer.`[consumer key]`</td>
+                    <td>OAuth key.</td>
+                    <td>如果开启OAuth该项必须配置.</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr class="row-odd"><td>kairosdb.job.cache_file_cleaner_schedule</td>
+                    <td>缓存文件清理时间表达式。使用Quartz Cron语法.</td>
+                    <td>&nbsp;</td>
+                    <td><cite>0 0 12 ? * SUN *</cite></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--第八节-->
+        <div class="section" id="logging">
+            <h1>日志<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h1>
+            <p>KairosDB将他自己的日志放在<tt class="docutils literal"><span class="pre">/opt/kairosdb/log/</span></tt>. 它在每天工作,所以每天都创建一个新的日志和命名<strong>kairosdb.log</strong>; 当第二天到来时 <em>kairosdb.log</em> 会压缩和重命名 <em>kairosdb.&lt;YYYY-MM-DD&gt;.log</em>, where &lt;YYYY-MM-DD&gt; 是这个日志文件创建时的日期时间.</p>
+            <p>从KairosDB 1.1.2开始, 将使用一种更健壮的日志系统。 从这个版本,KairosDB 将每天压缩日志，为了最小化空间用于存储日志文件。 同时, 每一次日志文件达到100 mb, 它将被压缩,一个新的文件将被生成以同样的名字 (直到一天结束的时候,会产生一个新的日志文件).</p>
+            <blockquote>
+                <div><strong>注意:</strong> KairosDB 使用众所周知的 Logback框架来记录日志 如果你对Logback有疑问,请参考他们的论坛。</div></blockquote>
+            <p>如果你想改变这些日志设置,  请看看 <tt class="docutils literal"><span class="pre">/opt/kairosdb/conf/logging/logback.xml</span></tt> 和在 <a class="reference external" href="http://logback.qos.ch/manual/configuration.html">Logback 文档</a>.</p>
+        </div>
+        <!--第九节-->
+
+        <div class="section" id="kairosdb-statistics">
+            <h1>KairosDB 统计<a class="headerlink" href="#kairosdb-statistics" title="Permalink to this headline">¶</a></h1>
+            <p>KairosDB保存内部度量指标到数据存储,所以您可以监视服务器的性能.因为度量存储在数据存储后，可以使用UI视图展现数据。</p>
+            <p>这些内部指标写默认每分钟一次。 你可以调整频率修改报告的记录者和报告周期kairosdb单元在kairosdb.properties 文件中.</p>
+            <div class="highlight-python"><div class="highlight"><pre><span class="n">kairosdb</span><span class="o">.</span><span class="n">reporter</span><span class="o">.</span><span class="n">period</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">kairosdb</span><span class="o">.</span><span class="n">reporter</span><span class="o">.</span><span class="n">period_unit</span><span class="o">=</span><span class="n">minute</span>
+</pre></div>
+            </div>
+            <p>kairosdb.reporter.period_unit 单位可以是 milliseconds, seconds, minutes, hours, 和 days.</p>
+            <p>如果您修改了必须重启生效</p>
+            <p>您可以移除内部度量报告通过在配置文件中修改kairosdb.service.reporter 属性</p>
+            <div class="section" id="metrics-reported">
+                <h2>度量报告列表<a class="headerlink" href="#metrics-reported" title="Permalink to this headline">¶</a></h2>
+                <ul class="simple">
+                    <li><em>kairosdb.datastore.cassandra.key_query_time</em> -从Cassandra中根据row key查询数据的时间，单位毫秒.</li>
+                    <li><em>kairosdb.datastore.query_collisions</em> - 在同一时间，相同的查询数量。 或者在其他完成前一个开始。</li>
+                    <li><em>kairosdb.datastore.query_row_count</em> - 数据查询检索的行数.</li>
+                    <li><em>kairosdb.datastore.query_sample_size</em> - 从Cassandra查询的数据点的数量(聚合前).</li>
+                    <li><em>kairosdb.datastore.query_time</em> - Cassandra查询数据的毫秒数 (不包括键查找时间).</li>
+                    <li><em>kairosdb.datastore.write_size</em> - 上一次写入时，写入的数据点的数量</li>
+                    <li><em>kairosdb.http.ingest_count</em> - 从上次报告开始的通过http的数据点的数量</li>
+                    <li><em>kairosdb.http.ingest_time</em> - The amount of time to ingest the number of metrics from kairosdb.http.ingest_count.  So ingest_count / ingest_time is an average of how fast a single metric is inserted.</li>
+                    <li><em>kairosdb.http.query_time</em> - 从查询请求到相应整个过程的时间  不包括将数据发送给客户端的时间.</li>
+                    <li><em>kairosdb.http.request_time</em> - The total amount of time an HTTP request takes from recieving data to sending response.</li>
+                    <li><em>kairosdb.jvm.free_memory</em> - 在JVM中可用空闲内存的数量。</li>
+                    <li><em>kairosdb.jvm.total_memory</em> - 在JVM中总内存的数量。.</li>
+                    <li><em>kairosdb.jvm.max_memory</em> - 最大的JVM内存使用量.</li>
+                    <li><em>kairosdb.jvm.thread_count</em> - 在JVM中运行的线程数量.</li>
+                    <li><em>kairosdb.metric_counters</em> - 从上次报告开始的接收的metric度量数量  Tags 分开从另一个单独的一个指标</li>
+                    <li><em>kairosdb.protocol.http_request_count</em> - 每个方法的请求数 这包括一个方法标记表示被调用的方法。例如, method=query 如果一个查询完成.</li>
+                    <li><em>kairosdb.protocol.telnet_request_count</em> - The number of telnet requests for each method. This includes a method tag that indicates the method that called. For example, method=put if the put method was called.</li>
+                </ul>
+            </div>
+        </div>
+        <!--第十节-->
+        <div class="section" id="cassandra-schema">
+            <h1>Cassandra Schema<a class="headerlink" href="#cassandra-schema" title="Permalink to this headline">¶</a></h1>
+            <dl class="docutils">
+                <dt> cassandra schema 包含3个列族</dt>
+                <dd><ul class="first last simple">
+                    <li>data_points - 数据保存在这里.</li>
+                    <li>row_key_index - 在一个查询中查找行所使用的的索引</li>
+                    <li>string_index -用于解释的查询中的标签和度量的索引。.</li>
+                </ul>
+                </dd>
+            </dl>
+            <div class="section" id="column-families">
+                <h2>列族<a class="headerlink" href="#column-families" title="Permalink to this headline">¶</a></h2>
+                <div class="section" id="data-points-column-family">
+                    <h3>Data Points列族<a class="headerlink" href="#data-points-column-family" title="Permalink to this headline">¶</a></h3>
+                    <dl class="docutils">
+                        <dt> row key主要是由三部分连接在一起。</dt>
+                        <dd><ol class="first last arabic simple">
+                            <li>Metric 名字 (UTF-8编码)</li>
+                            <li>Row 时间戳.  行开始的时间戳.</li>
+                            <li>数据存储类型.</li>
+                            <li>连接tags的字符串拼接(tag1=val1:tag2=val2...)</li>
+                        </ol>
+                        </dd>
+                    </dl>
+                    <p>列名是32位的数据.  row key中的第一个31位的偏移量是无符号时间数据 (单位毫秒).  最后一位是未使用的。</p>
+                    <p>列的值根据列不同的类型，值不同。  准确定义的格式 <tt class="docutils literal"><span class="pre">writeValueToBuffer</span></tt> 方法在 DataPoint中定义.</p>
+                    <p>一行的长度设置为恰好或者是三周时间的数据或者 1,814,400,000 列.</p>
+                </div>
+                <div class="section" id="row-key-index-column-family">
+                    <h3>Row Key 索引列族<a class="headerlink" href="#row-key-index-column-family" title="Permalink to this headline">¶</a></h3>
+                    <p>这一行主要是查询数据时才使用。   row key 是行关键指标的名称。  The names of the columns are the row keys from the data_points column family.  The columns have no values.</p>
+                </div>
+                <div class="section" id="string-index-column-family">
+                    <h3>String索引列族<a class="headerlink" href="#string-index-column-family" title="Permalink to this headline">¶</a></h3>
+                    <p>只是在系统中的一个索引用来查找metric（度量）名称, tag 名称 和 tag values 值.  There are three rows one for each of the above mentioned.</p>
+                </div>
+            </div>
+            <div class="section" id="how-the-schema-is-used">
+                <h2>Schema 是如何使用的<a class="headerlink" href="#how-the-schema-is-used" title="Permalink to this headline">¶</a></h2>
+                <p>When a query comes in a column slice of the row key index is done for the particular metric, this returns the rows that will contain the data.  The row keys are then filtered based on if any tags were specified.  A multi get hector call is made to fetch the data from the various rows.  If any row has more data then the remainder is fetched individually using a larger buffer.</p>
+            </div>
+            <div class="section" id="comparison-to-opentsdb-hbase">
+                <h2>与 OpenTSDB HBase比较<a class="headerlink" href="#comparison-to-opentsdb-hbase" title="Permalink to this headline">¶</a></h2>
+                <p>For one we do not use id&#8217;s for strings.  The string data (metric names and tags) are written to row keys and the appropriate indexes.  Because Cassandra has much wider rows there are far fewer keys written to the database.  The space saved by using id&#8217;s is minor and by not using id&#8217;s we avoid having to use any kind of locks across the cluster.</p>
+                <p>As mentioned the Cassandra has wider rows.  The default row size in OpenTSDB HBase is 1 hour.  Cassandra is set to 3 weeks.</p>
+            </div>
+        </div>
+        <!--第十一节-->
+        <div class="section" id="roll-ups">
+            <h1>Roll-ups机制<a class="headerlink" href="#roll-ups" title="Permalink to this headline">¶</a></h1>
+            <p>Roll-ups是一种提高查询性能的机制，通过聚合或卷起数据成一个更大的时间范围,如超过一分钟的平均毫秒数据。
+                Roll-ups 是在现有的数据上执行查询,汇总数据,并将结果写入另一个指标。原始数据是完整的。
+                Roll-ups are continuously run on a schedule rolling up a small time period of data on each execution.
+                Roll-ups 将通过创建一个roll-up任务。一个任务包含一个或多个roll-ups和一个执行时间间隔(任务执行的频率)。
+                Roll-ups 可以使用 <a class="reference internal" href="restapi/Roll-ups.html"><em>Roll-up REST API</em></a> 或者通过Web UI (<cite>http://&lt;kairosServer&gt;:&lt;port&gt;/rollup.html</cite>).</p>
+            <div class="section" id="installing">
+                <h2>安装<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h2>
+                <p>Roll-ups 本身包含在程序中只是被禁用了 你可以开启配置在kairosdb.properties中并重启KairosDB:</p>
+                <blockquote>
+                    <div><div class="highlight-python"><div class="highlight"><pre><span class="n">kairosdb</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">rollups</span><span class="o">=</span><span class="n">org</span><span class="o">.</span><span class="n">kairosdb</span><span class="o">.</span><span class="n">rollup</span><span class="o">.</span><span class="n">RollUpModule</span>
+</pre></div>
+                    </div>
+                    </div></blockquote>
+            </div>
+            <div class="section" id="example">
+                <h2>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+                <p>一个常见的用例在仪表盘中监控系统。我们通过监控数天或数周的数据在仪表盘中显示来监控系统。仪表盘会定期更新,我们希望他们更新数据时能快速刷新。
+                    如果仪表板显示异常我们希望可以深入到更细粒度的数据。 所以希望得到在毫秒精度数据报告, 但仪表盘是由roll-up任务,卷起来的数据，是每小时、每天或每周的精度。
+                    Roll-ups提高查询的性能,因为使用更少的数据点,每天的值和聚合毫秒数据的图表。
+                    </p>
+                <p>例如,我们测量一个特定类型的事件的总数,在3月进入我们的系统。  以毫秒计的数据。
+                    查询的结果为3个月,聚合为一个星期:</p>
+                <blockquote>
+                    <div><div class="highlight-python"><div class="highlight"><pre>Query Time: 24 seconds
+Data Points Returned: 1,535,711
+Data Points Plotted: 12
+</pre></div>
+                    </div>
+                    </div></blockquote>
+                <p>然而如果, 我们创建一个 roll-up任务,来卷起来每日值 查询速度显著提升:</p>
+                <blockquote>
+                    <div><div class="highlight-python"><div class="highlight"><pre>Query Time: 417 milliseconds
+Data Points Returned: 2,045
+Data Points Plotted: 12
+</pre></div>
+                    </div>
+                    </div></blockquote>
+            </div>
+        </div>
+        <!--第十二节-->
+        <div class="section" id="plugins">
+            <h1>插件<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h1>
+            <dl class="docutils">
+                <dt>插件提供以不同的方法来扩展Kairos。使用插件可以:</dt>
+                <dd><ol class="first last arabic simple">
+                    <li>添加数据点监听器</li>
+                    <li>添加一个新的存储数据点的方式</li>
+                    <li>添加一个新的协议处理器</li>
+                    <li>添加一个自定义系统监控</li>
+                </ol>
+                </dd>
+            </dl>
+            <p>个很好的例子,一个简单的插件,请参阅 <a class="reference external" href="https://github.com/proofpoint/kairos-announce">kairos-announce</a> project.</p>
+            <div class="section" id="plugin-requirements">
+                <h2>Plugin 开发步骤<a class="headerlink" href="#plugin-requirements" title="Permalink to this headline">¶</a></h2>
+                <dl class="docutils">
+                    <dt>要创建一个插件需要做以下事情</dt>
+                    <dd><ol class="first last arabic simple">
+                        <li>Create a class that implements com.google.inject.AbstractModule.</li>
+                        <li>Create a properties file that has an entry kairosdb.service.[your_service_name] that is set to the full class name of your Module.</li>
+                        <li>Install a jar containing your class files to /opt/kairosdb/lib and install the properties file into /opt/kairosdb/conf</li>
+                    </ol>
+                    </dd>
+                </dl>
+            </div>
+            <div class="section" id="plugin-loading-process">
+                <h2>插件加载过程<a class="headerlink" href="#plugin-loading-process" title="Permalink to this headline">¶</a></h2>
+                <dl class="docutils">
+                    <dt>这是 KairosDB 加载库和插件的过程:</dt>
+                    <dd><ol class="first arabic simple">
+                        <li>All jar files in lib are automatically added to the classpath by the startup script.</li>
+                        <li>Properties in kairosdb.properties are loaded first from the classpath and then from the file.</li>
+                        <li>For every .properties file in the conf directory besides kairosdb.properties, the following happens:</li>
+                    </ol>
+                        <blockquote>
+                            <div><ol class="arabic simple">
+                                <li>Kairos attempts to load the file from the classpath.  (this lets you add default values to future releases of your plugin)</li>
+                                <li>Kairos loads the conf properties file.</li>
+                            </ol>
+                            </div></blockquote>
+                        <ol class="last arabic simple">
+                            <li>Kairos looks through all the loaded properties for ones starting with kairosdb.service.  These are expected to point to Guice modules.</li>
+                            <li>Load all discovered Guice modules.</li>
+                            <li>Look through Guice bindings for implementations of KairosDBService and start them.</li>
+                        </ol>
+                    </dd>
+                </dl>
+                <p>There is in essence only one Properties object in Kairos so, plugins can overwrite properties set in kairosdb.properties with their own.</p>
+                <p>For clarity lets look at an example of how things get loaded.  Say I create a new plugin called xplugin, my install places two files, xpluing.jar in /opt/kairosdb/lib and xplugin.properties in /opt/kairosdb/conf.</p>
+                <p>When KairosDB starts it first loads kairosdb.properties and then scans the conf directory for other .properties files.  KairosDB sees xplugin.properties and tries to find the file on the classpath.  This lets me as a plugin developer create a xplugin.properties that placed within my xplugin.jar file and contains default settings.  After loading the properties file on the classpath KairosDB loads the file from the conf directory.</p>
+            </div>
+        </div>
+        <!--第十二节-->
+        <div class="section" id="custom-data">
+            <h1>自定义数据<a class="headerlink" href="#custom-data" title="Permalink to this headline">¶</a></h1>
+            <p>KairosDB 提供了一种方法来存储和聚合自定义数据类型.  KairosDB默认本身提供long, double 和 string 类型.</p>
+            <div class="section" id="steps-for-creating-custom-data-type">
+                <h2>创建自定义数据类型步骤<a class="headerlink" href="#steps-for-creating-custom-data-type" title="Permalink to this headline">¶</a></h2>
+                <ol class="arabic simple">
+                    <li>创建一个 <a class="reference external" href="Plugins.html">插件</a>.</li>
+                    <li>创建一个 DataPointFactory 实现.</li>
+                    <li>创建一个 DataPoint 实现.</li>
+                    <li>绑定该DataPointFactory到插件模块.</li>
+                    <li>注册自定义类型到properties文件</li>
+                </ol>
+                <p>参看StringDataPointFactory.java 和 StringDataPoint.java 这个例子是怎么实现的</p>
+            </div>
+            <div class="section" id="example-for-creating-custom-types">
+                <h2>创建自定义类型的例子<a class="headerlink" href="#example-for-creating-custom-types" title="Permalink to this headline">¶</a></h2>
+                <p>在这个例子中,我们希望有一个自定义类型的复数实部和虚部。
+                    以下是DataPoint的代码和DataPointFactory工厂实现:</p>
+                <p>ComplexDataPoint（复杂的数据点）</p>
+                <div class="highlight-java"><div class="highlight"><pre><span class="kn">package</span> <span class="n">org</span><span class="o">.</span><span class="na">kairosdb</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">datapoints</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">org.json.JSONException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.json.JSONWriter</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.io.DataOutput</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> Used to show how to create a custom data type</span>
+<span class="cm"> Created by bhawkins on 6/27/14.</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ComplexDataPoint</span> <span class="kd">extends</span> <span class="n">DataPointHelper</span>
+<span class="o">{</span>
+        <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">API_TYPE</span> <span class="o">=</span> <span class="s">&quot;complex&quot;</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="kt">double</span> <span class="n">m_real</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="kt">double</span> <span class="n">m_imaginary</span><span class="o">;</span>
+
+        <span class="kd">public</span> <span class="nf">ComplexDataPoint</span><span class="o">(</span><span class="kt">long</span> <span class="n">timestamp</span><span class="o">,</span> <span class="kt">double</span> <span class="n">real</span><span class="o">,</span> <span class="kt">double</span> <span class="n">imaginary</span><span class="o">)</span>
+        <span class="o">{</span>
+                <span class="kd">super</span><span class="o">(</span><span class="n">timestamp</span><span class="o">);</span>
+                <span class="n">m_real</span> <span class="o">=</span> <span class="n">real</span><span class="o">;</span>
+                <span class="n">m_imaginary</span> <span class="o">=</span> <span class="n">imaginary</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">writeValueToBuffer</span><span class="o">(</span><span class="n">DataOutput</span> <span class="n">buffer</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span>
+        <span class="o">{</span>
+                <span class="n">buffer</span><span class="o">.</span><span class="na">writeDouble</span><span class="o">(</span><span class="n">m_real</span><span class="o">);</span>
+                <span class="n">buffer</span><span class="o">.</span><span class="na">writeDouble</span><span class="o">(</span><span class="n">m_imaginary</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">writeValueToJson</span><span class="o">(</span><span class="n">JSONWriter</span> <span class="n">writer</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">JSONException</span>
+        <span class="o">{</span>
+                <span class="n">writer</span><span class="o">.</span><span class="na">object</span><span class="o">();</span>
+
+                <span class="n">writer</span><span class="o">.</span><span class="na">key</span><span class="o">(</span><span class="s">&quot;real&quot;</span><span class="o">).</span><span class="na">value</span><span class="o">(</span><span class="n">m_real</span><span class="o">);</span>
+                <span class="n">writer</span><span class="o">.</span><span class="na">key</span><span class="o">(</span><span class="s">&quot;imaginary&quot;</span><span class="o">).</span><span class="na">value</span><span class="o">(</span><span class="n">m_imaginary</span><span class="o">);</span>
+
+                <span class="n">writer</span><span class="o">.</span><span class="na">endObject</span><span class="o">();</span>
+        <span class="o">}</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="n">String</span> <span class="nf">getApiDataType</span><span class="o">()</span>
+        <span class="o">{</span>
+                <span class="k">return</span> <span class="n">API_TYPE</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="n">String</span> <span class="nf">getDataStoreDataType</span><span class="o">()</span>
+        <span class="o">{</span>
+                <span class="k">return</span> <span class="n">ComplexDataPointFactory</span><span class="o">.</span><span class="na">DST_COMPLEX</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isLong</span><span class="o">()</span>
+        <span class="o">{</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">long</span> <span class="nf">getLongValue</span><span class="o">()</span>
+        <span class="o">{</span>
+                <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isDouble</span><span class="o">()</span>
+        <span class="o">{</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getDoubleValue</span><span class="o">()</span>
+        <span class="o">{</span>
+                <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+                </div>
+                <p>ComplexDataPointFactory（复杂的数据点工厂）</p>
+                <div class="highlight-java"><div class="highlight"><pre><span class="kn">package</span> <span class="n">org</span><span class="o">.</span><span class="na">kairosdb</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">datapoints</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.google.gson.JsonElement</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.google.gson.JsonObject</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.kairosdb.core.DataPoint</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.io.DataInput</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> Used to show how to create a custom data type</span>
+<span class="cm"> Created by bhawkins on 6/30/14.</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ComplexDataPointFactory</span> <span class="kd">implements</span> <span class="n">DataPointFactory</span>
+<span class="o">{</span>
+        <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">DST_COMPLEX</span> <span class="o">=</span> <span class="s">&quot;kairos_complex&quot;</span><span class="o">;</span>
+        <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">GROUP_TYPE</span> <span class="o">=</span> <span class="s">&quot;complex&quot;</span><span class="o">;</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="n">String</span> <span class="nf">getDataStoreType</span><span class="o">()</span>
+        <span class="o">{</span>
+                <span class="k">return</span> <span class="n">DST_COMPLEX</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="n">String</span> <span class="nf">getGroupType</span><span class="o">()</span>
+        <span class="o">{</span>
+                <span class="k">return</span> <span class="n">GROUP_TYPE</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="n">DataPoint</span> <span class="nf">getDataPoint</span><span class="o">(</span><span class="kt">long</span> <span class="n">timestamp</span><span class="o">,</span> <span class="n">JsonElement</span> <span class="n">json</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span>
+        <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">json</span><span class="o">.</span><span class="na">isJsonObject</span><span class="o">())</span>
+                <span class="o">{</span>
+                        <span class="n">JsonObject</span> <span class="n">object</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="na">getAsJsonObject</span><span class="o">();</span>
+                        <span class="kt">double</span> <span class="n">real</span> <span class="o">=</span> <span class="n">object</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;real&quot;</span><span class="o">).</span><span class="na">getAsDouble</span><span class="o">();</span>
+                        <span class="kt">double</span> <span class="n">imaginary</span> <span class="o">=</span> <span class="n">object</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;imaginary&quot;</span><span class="o">).</span><span class="na">getAsDouble</span><span class="o">();</span>
+
+                        <span class="k">return</span> <span class="k">new</span> <span class="nf">ComplexDataPoint</span><span class="o">(</span><span class="n">timestamp</span><span class="o">,</span> <span class="n">real</span><span class="o">,</span> <span class="n">imaginary</span><span class="o">);</span>
+                <span class="o">}</span>
+                <span class="k">else</span>
+                        <span class="k">throw</span> <span class="k">new</span> <span class="nf">IOException</span><span class="o">(</span><span class="s">&quot;JSON object is not a valid complex data point&quot;</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="n">DataPoint</span> <span class="nf">getDataPoint</span><span class="o">(</span><span class="kt">long</span> <span class="n">timestamp</span><span class="o">,</span> <span class="n">DataInput</span> <span class="n">buffer</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span>
+        <span class="o">{</span>
+                <span class="kt">double</span> <span class="n">real</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="na">readDouble</span><span class="o">();</span>
+                <span class="kt">double</span> <span class="n">imaginary</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="na">readDouble</span><span class="o">();</span>
+
+                <span class="k">return</span> <span class="k">new</span> <span class="nf">ComplexDataPoint</span><span class="o">(</span><span class="n">timestamp</span><span class="o">,</span> <span class="n">real</span><span class="o">,</span> <span class="n">imaginary</span><span class="o">);</span>
+        <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+                </div>
+                <p>在我们的插件模块 我们需要绑定 ComplexDataPointFactory 像这样:</p>
+                <div class="highlight-java"><div class="highlight"><pre><span class="n">bind</span><span class="o">(</span><span class="n">ComplexDataPointFactory</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">in</span><span class="o">(</span><span class="n">Singleton</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</pre></div>
+                </div>
+                <p>在我们的插件属性文件 我们需要注册api类型:</p>
+                <div class="highlight-java"><div class="highlight"><pre><span class="n">kairosdb</span><span class="o">.</span><span class="na">datapoints</span><span class="o">.</span><span class="na">factory</span><span class="o">.</span><span class="na">complex</span><span class="o">=</span><span class="n">org</span><span class="o">.</span><span class="na">kairosdb</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">datapoints</span><span class="o">.</span><span class="na">ComplexDataPointFactory</span>
+</pre></div>
+                </div>
+                <p>为什么上面的两步分离和必需的?  The first step binds our factory into guice and registers the datastore type of &#8216;kairos_complex&#8217;.
+                    The second step registers the api type.
+                    Lets say down the road we change how we want to store the complex type.  Without this separation the only way to change is by exporting all the data in importing it using the new method.  With this separation I can register a new factory that defines the datastore type as &#8216;kairos_complex2&#8217; and bind it to the &#8216;complex&#8217; api type.  New data will now be stored in the new format and yet the system will still be able to read the old data.</p>
+            </div>
+        </div>
+        <!--第十三节-->
+        <div class="section" id="editing-kairos-with-intellij">
+            <h1>用IntelliJ编辑Kairos<a class="headerlink" href="#editing-kairos-with-intellij" title="Permalink to this headline">¶</a></h1>
+            <div class="section" id="import-project">
+                <h2>导入项目<a class="headerlink" href="#import-project" title="Permalink to this headline">¶</a></h2>
+                <p>Go to File-&gt;Import Project</p>
+                <p>Select the root of the Kairosdb project.</p>
+                <p>Select the main source and web root modules.</p>
+                <img alt="../_images/idea_kairos_select_source.png" src="_images/idea_kairos_select_source.png" />
+                <p>单击next直到最后.</p>
+            </div>
+            <div class="section" id="configure-modules">
+                <h2>配置模块 Modules<a class="headerlink" href="#configure-modules" title="Permalink to this headline">¶</a></h2>
+                <p>一旦项目打开就去项目设置(图标旁边的扳手)。
+                    去Modules和选择的主要模块.</p>
+                <ul class="simple">
+                    <li>Under the &#8216;Sources&#8217; tab remove the existing content root and add a new one that points to the root of the project.  Then add the following source and test folders:</li>
+                </ul>
+                <img alt="../_images/idea_kairos_paths.png" src="_images/idea_kairos_paths.png" />
+                <ul class="simple">
+                    <li>Under the Dependencies tab change it to look like this</li>
+                </ul>
+                <img alt="../_images/idea_kairos_dependencies.png" src="_images/idea_kairos_dependencies.png" />
+            </div>
+            <div class="section" id="alternative-approach">
+                <h2>转换方法<a class="headerlink" href="#alternative-approach" title="Permalink to this headline">¶</a></h2>
+                <p>Create &#8216;kairosdb.iml&#8217; at the root of your kairos project and copy the following into it:</p>
+                <div class="highlight-xml"><div class="highlight"><pre><span class="nt">&lt;module</span> <span class="na">type=</span><span class="s">&quot;JAVA_MODULE&quot;</span> <span class="na">version=</span><span class="s">&quot;4&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&quot;NewModuleRootManager&quot;</span> <span class="na">inherit-compiler-output=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;exclude-output</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;content</span> <span class="na">url=</span><span class="s">&quot;file://$MODULE_DIR$&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;sourceFolder</span> <span class="na">url=</span><span class="s">&quot;file://$MODULE_DIR$/src/main/conf&quot;</span> <span class="na">isTestSource=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;sourceFolder</span> <span class="na">url=</span><span class="s">&quot;file://$MODULE_DIR$/src/main/java&quot;</span> <span class="na">isTestSource=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;sourceFolder</span> <span class="na">url=</span><span class="s">&quot;file://$MODULE_DIR$/src/main/resources&quot;</span> <span class="na">isTestSource=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;sourceFolder</span> <span class="na">url=</span><span class="s">&quot;file://$MODULE_DIR$/src/test/java&quot;</span> <span class="na">isTestSource=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;sourceFolder</span> <span class="na">url=</span><span class="s">&quot;file://$MODULE_DIR$/src/test/resources&quot;</span> <span class="na">isTestSource=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;excludeFolder</span> <span class="na">url=</span><span class="s">&quot;file://$MODULE_DIR$/build&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/content&gt;</span>
+    <span class="nt">&lt;orderEntry</span> <span class="na">type=</span><span class="s">&quot;inheritedJdk&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;orderEntry</span> <span class="na">type=</span><span class="s">&quot;sourceFolder&quot;</span> <span class="na">forTests=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;orderEntry</span> <span class="na">type=</span><span class="s">&quot;module-library&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;library&gt;</span>
+        <span class="nt">&lt;CLASSES&gt;</span>
+          <span class="nt">&lt;root</span> <span class="na">url=</span><span class="s">&quot;file://$MODULE_DIR$/lib&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/CLASSES&gt;</span>
+        <span class="nt">&lt;JAVADOC</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;SOURCES&gt;</span>
+          <span class="nt">&lt;root</span> <span class="na">url=</span><span class="s">&quot;file://$MODULE_DIR$/lib&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/SOURCES&gt;</span>
+        <span class="nt">&lt;jarDirectory</span> <span class="na">url=</span><span class="s">&quot;file://$MODULE_DIR$/lib&quot;</span> <span class="na">recursive=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;jarDirectory</span> <span class="na">url=</span><span class="s">&quot;file://$MODULE_DIR$/lib&quot;</span> <span class="na">recursive=</span><span class="s">&quot;false&quot;</span> <span class="na">type=</span><span class="s">&quot;SOURCES&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/library&gt;</span>
+    <span class="nt">&lt;/orderEntry&gt;</span>
+    <span class="nt">&lt;orderEntry</span> <span class="na">type=</span><span class="s">&quot;module-library&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;library&gt;</span>
+        <span class="nt">&lt;CLASSES&gt;</span>
+          <span class="nt">&lt;root</span> <span class="na">url=</span><span class="s">&quot;file://$MODULE_DIR$/lib/ivy/default&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/CLASSES&gt;</span>
+        <span class="nt">&lt;JAVADOC</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;SOURCES&gt;</span>
+          <span class="nt">&lt;root</span> <span class="na">url=</span><span class="s">&quot;file://$MODULE_DIR$/lib/ivy/default&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/SOURCES&gt;</span>
+        <span class="nt">&lt;jarDirectory</span> <span class="na">url=</span><span class="s">&quot;file://$MODULE_DIR$/lib/ivy/default&quot;</span> <span class="na">recursive=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;jarDirectory</span> <span class="na">url=</span><span class="s">&quot;file://$MODULE_DIR$/lib/ivy/default&quot;</span> <span class="na">recursive=</span><span class="s">&quot;false&quot;</span> <span class="na">type=</span><span class="s">&quot;SOURCES&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/library&gt;</span>
+    <span class="nt">&lt;/orderEntry&gt;</span>
+    <span class="nt">&lt;orderEntry</span> <span class="na">type=</span><span class="s">&quot;library&quot;</span> <span class="na">name=</span><span class="s">&quot;tools&quot;</span> <span class="na">level=</span><span class="s">&quot;project&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/component&gt;</span>
+<span class="nt">&lt;/module&gt;</span>
+</pre></div>
+                </div>
+                <p>IntelliJ 将认为这是一个新的模块,您可以删除它在最初创建导入的其他所有的。</p>
+            </div>
+            <div class="section" id="running-kairos">
+                <h2>运行 Kairos<a class="headerlink" href="#running-kairos" title="Permalink to this headline">¶</a></h2>
+                <p>You can configure IntelliJ to run kairos, you just need to call main and pass a single parameter to where you kairosdb.properties file is.</p>
+                <p>There is also a build switch to run Kairos so the debugger can be attached.</p>
+                <div class="highlight-python"><div class="highlight"><pre>java make run-debug
+</pre></div>
+                </div>
+                <p>Will run kairos and listen on port 5005 for the debugger to attach which you can do from within IntelliJ.</p>
+                <p>The build script is also setup so you can place a kairosdb.properties file in the root of the project and it will use it instead of the one checked into the project.  This way you can develop with custom properties without messing with the one in the project.</p>
+            </div>
+        </div>
+        <!--第十四节-->
+        <!--rest api  http://kairosdb.github.io/docs/build/html/restapi/index.html 暂不翻译-->
+        <div class="section" id="restapi">
+            <h1> <a href="http://kairosdb.github.io/docs/build/html/restapi/index.html">Rest API （未翻译 连接至官方原文）</a></h1>
+        </div>
+        <!--第十五节-->
+        <!--Telnet api  http://kairosdb.github.io/docs/build/html/telnetapi/index.html 暂不翻译-->
+        <div class="section" id="telnetapi">
+            <h1> <a href="http://kairosdb.github.io/docs/build/html/telnetapi/index.html">Telnet API （未翻译 连接至官方原文）</a></h1>
+        </div>
+        <!--第十六节-->
+        <div class="section" id="graphite-protocol">
+            <h1>Graphite 协议(和Graphite整合使用暂不翻译)<a class="headerlink" href="#graphite-protocol" title="Permalink to this headline">¶</a></h1>
+            <p>Kairos accepts both the Graphite plaintext and pickle protocol as explained <a class="reference external" href="https://graphite.readthedocs.org/en/latest/feeding-carbon.html">here</a>.  This feature is for ingesting data only.  This lets you push data to Kairos from applications that normally push to Graphite.  You can also configure Carbon relay servers to send data to Kairos for long term storage.</p>
+            <div class="section" id="enabling-graphite-protocol">
+                <h2>Enabling Graphite Protocol<a class="headerlink" href="#enabling-graphite-protocol" title="Permalink to this headline">¶</a></h2>
+                <p>Turning on the Graphite plaintext and pickle protocol is done by enabling the CarbonServerModule in the kairosdb.properties file.</p>
+                <div class="highlight-python"><div class="highlight"><pre><span class="n">kairosdb</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">carbon</span><span class="o">=</span><span class="n">org</span><span class="o">.</span><span class="n">kairosdb</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">carbon</span><span class="o">.</span><span class="n">CarbonServerModule</span>
+</pre></div>
+                </div>
+            </div>
+            <div class="section" id="configuring-graphite-protocol">
+                <h2>Configuring Graphite Protocol<a class="headerlink" href="#configuring-graphite-protocol" title="Permalink to this headline">¶</a></h2>
+                <p>The following properties control the Graphite protocol handlers</p>
+                <table border="1" class="docutils">
+                    <colgroup>
+                        <col width="29%" />
+                        <col width="71%" />
+                    </colgroup>
+                    <tbody valign="top">
+                    <tr class="row-odd"><td>kairosdb.carbon.tagparser</td>
+                        <td>Class name for the tag parser (default org.kairosdb.core.carbon.HostTagParser)</td>
+                    </tr>
+                    <tr class="row-even"><td>kairosdb.carbon.text.port</td>
+                        <td>Plaintext port (default 2003)</td>
+                    </tr>
+                    <tr class="row-odd"><td>kairosdb.carbon.pickle.port</td>
+                        <td>Pickle port (default 2004)</td>
+                    </tr>
+                    <tr class="row-even"><td>kairosdb.carbon.pickle.max_size</td>
+                        <td>Size of buffer to allocate for incoming pickles (default 2048)</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p>The following settings are used with the HostTagParser class.  As Kairos uses tags and requires at least one tag a tag must be derived from the metric name.  The HostTagParser uses simple regular expressions to identify a host tag.  The default settings below show extracting the second value in a dot notation metric name as the host.  For example service.host_name.some_metric.</p>
+                <table border="1" class="docutils">
+                    <colgroup>
+                        <col width="37%" />
+                        <col width="63%" />
+                    </colgroup>
+                    <tbody valign="top">
+                    <tr class="row-odd"><td>kairosdb.carbon.hosttagparser.host_pattern</td>
+                        <td>Pattern for finding the host name (default &#8216;<cite>[^.]*.([^.]*)..*</cite>&#8216;)</td>
+                    </tr>
+                    <tr class="row-even"><td>kairosdb.carbon.hosttagparser.host_replacement</td>
+                        <td>Used in combination with the above to come up with a host name (default &#8216;<cite>$1</cite>&#8216;)</td>
+                    </tr>
+                    <tr class="row-odd"><td>kairosdb.carbon.hosttagparser.metric_pattern</td>
+                        <td>Pattern for finding the metric name (default &#8216;<cite>([^.]*).[^.]*.(.*)</cite>&#8216;)</td>
+                    </tr>
+                    <tr class="row-even"><td>kairosdb.carbon.hosttagparser.metric_replacement</td>
+                        <td>Used in combination with the above to come up with a metric name (default &#8216;<cite>$1.$2</cite>&#8216;)</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section" id="custom-tag-parser">
+                <h2>Custom Tag Parser<a class="headerlink" href="#custom-tag-parser" title="Permalink to this headline">¶</a></h2>
+                <p>To implement your own tag parser just implement org.kairosdb.core.carbon.TagParser interface and specify your new class with the <cite>kairosdb.carbon.tagparser</cite> property in kairosdb.properties.</p>
+            </div>
+        </div>
+        <!--第十七节-->
+        <div class="section" id="bug-tracking">
+            <h1>Bug 追踪<a class="headerlink" href="#bug-tracking" title="Permalink to this headline">¶</a></h1>
+            <p>bug追踪在 GitHub.  问题报告在这个网站将保持直到他们关闭或移动到GitHub.</p>
+            <p><a class="reference external" href="https://github.com/kairosdb/kairosdb/issues">GitHub Issue tracker</a></p>
+        </div>
+        <!--第十八节-->
+        <div class="section" id="external-links">
+            <h1>扩展<a class="headerlink" href="#external-links" title="Permalink to this headline">¶</a></h1>
+            <div class="section" id="kairosdb-plugins">
+                <h2>KairosDB 插件<a class="headerlink" href="#kairosdb-plugins" title="Permalink to this headline">¶</a></h2>
+                <ul class="simple">
+                    <li><a class="reference external" href="https://github.com/brianhks/kairos-carbon">Carbon protocol plugin for KairosDB</a></li>
+                    <li><a class="reference external" href="https://github.com/brianhks/kairos-kafka">Kafka reader - reads metrics from a kafka queue</a></li>
+                    <li><a class="reference external" href="https://github.com/hugocore/kairosdb-rabbitmq">RabbitMQ reader - reads from RabbitMQ</a></li>
+                    <li><a class="reference external" href="https://github.com/Kratos-ISE/kise-kairosdb-module">KISE KairosDB Module - particularly powerful and performant scripted aggregators using Javascript</a></li>
+                </ul>
+            </div>
+            <div class="section" id="client-libraries">
+                <h2>客户端库<a class="headerlink" href="#client-libraries" title="Permalink to this headline">¶</a></h2>
+                <ul class="simple">
+                    <li><a class="reference external" href="https://github.com/tomvandenberge/metrics-kairosdb">Yammer metrics library plugin for KairosDB</a></li>
+                    <li><a class="reference external" href="https://github.com/pcn/pyKairosDB">Python client</a></li>
+                    <li><a class="reference external" href="https://github.com/proofpoint/kairosdb-client">Java Client</a></li>
+                    <li><a class="reference external" href="https://github.com/burtonator/metrics-kairosdb">metrics-kairosdb</a></li>
+                    <li><a class="reference external" href="https://www.npmjs.com/package/kairosdb">A node.js KairosDB client</a></li>
+                    <li><a class="reference external" href="https://github.com/danibrutal/KairosDB-Client">PHP Client</a></li>
+                </ul>
+            </div>
+            <div class="section" id="collector-libraries">
+                <h2>收集器库<a class="headerlink" href="#collector-libraries" title="Permalink to this headline">¶</a></h2>
+                <ul class="simple">
+                    <li><a class="reference external" href="https://github.com/OpenTSDB/tcollector">TCollector - collects system stats</a> - uses telnet protocol</li>
+                    <li><a class="reference external" href="https://github.com/gregdurham/collectd-kairosdb">Collectd plugin for KairosDB</a> - uses telnet protocol</li>
+                </ul>
+            </div>
+            <div class="section" id="visualization-tools">
+                <h2>可视化工具<a class="headerlink" href="#visualization-tools" title="Permalink to this headline">¶</a></h2>
+                <ul class="simple">
+                    <li><a class="reference external" href="http://grafana.org/">Grafana</a> - A plugin for KairosDB exists (see below)</li>
+                    <li><a class="reference external" href="https://github.com/Kratos-ISE/grafana-kairosdb-datasource-plugin">KairosDB datasource for Grafana dashboard</a> - combine the awesome
+                        Grafana dashboard with the power of KairosDB</li>
+                    <li><a class="reference external" href="http://square.github.io/cubism/">Cubism.js</a></li>
+                    <li><a class="reference external" href="http://facette.io/">facette.io</a> - A connector for KairosDB exists</li>
+                    <li><a class="reference external" href="http://keen.github.io/dashboards/">Keen dashboard templates</a></li>
+                    <li><a class="reference external" href="http://dygraphs.com/">Dygraphs</a></li>
+                </ul>
+            </div>
+            <div class="section" id="business-intelligence-reporting">
+                <h2>BT商业智能 &amp; 报表<a class="headerlink" href="#business-intelligence-reporting" title="Permalink to this headline">¶</a></h2>
+                <ul class="simple">
+                    <li><a class="reference external" href="https://github.com/Kratos-ISE/birt-kairosdb-datasource-plugin">KairosDB datasource plugin for BIRT business Intelligence &amp;
+                        reporting tool</a> - use data from KairosDB within regular BI reports
+                        and executive dashboards. It includes parametrized time range (in
+                        natural language thanks to natty) and tags.</li>
+                </ul>
+            </div>
+            <div class="section" id="papers-about-kairosdb">
+                <h2>关于KairosDB的文章<a class="headerlink" href="#papers-about-kairosdb" title="Permalink to this headline">¶</a></h2>
+                <ul class="simple">
+                    <li><a class="reference external" href="http://www.koziolek.de/docs/Goldschmidt2014-IEEE-CLOUD-preprint.pdf">Scalability and robustness of TS databases</a>, T. Goldschmidt et al.</li>
+                    <li><a class="reference external" href="http://fg-arc.gi.de/fileadmin/architekturen2014/Goldschmidt_-_The_Automation_Cloud.pdf">The Automation Cloud</a> - Presentation related to the paper by T.
+                        Goldschmidt</li>
+                    <li><a class="reference external" href="https://www.conftool.pro/hic2014/index.php/HIC2014-1494.pdf?page=downloadPaper&amp;filename=HIC2014-1494.pdf&amp;form_id=1494">OPENSDM – AN OPEN SENSOR DATA MANAGEMENT TOOL</a></li>
+                    <li><a class="reference external" href="http://radar.oreilly.com/2015/03/redefining-power-distribution-using-big-data.html?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+oreilly%2Fradar%2Fatom+%28O%27Reilly+Radar%29">Redefining Power Distribution</a> - Doesn’t mention KairosDB in the
+                        text but the diagram shows Kairos being used.</li>
+                </ul>
+            </div>
+        </div>
 
 
     </div>
