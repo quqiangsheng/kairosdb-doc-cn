@@ -12,6 +12,12 @@ https://db-engines.com/en/ranking/time+series+dbms时间序列数据库排名第
 
 默认h2内存存储 支持多种存储后端
 
+官网               http://kairosdb.org
+
+中文社区            http://kairosdb.com
+
+中文社区国内镜像     https://max256.oschina.io/kairosdb-doc-cn/
+
 
 未完成--ing
 
