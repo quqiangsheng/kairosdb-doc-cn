@@ -680,7 +680,7 @@
                 <tr class="row-even"><td>kairosdb.hostname</td>
                     <td>报告kairosdb内部指标时使用的主机名</td>
                     <td>可选</td>
-                    <td>The &#8220;hostname&#8221; command is used if this is not set</td>
+                    <td>不设置该值，会使用hostname命令</td>
                 </tr>
                 <tr class="row-odd"><td>kairosdb.telnetserver.address</td>
                     <td>IPv4或 IPv6 地址 (参看Java&#8217;s InetAddress 类获得更多信息)</td>
@@ -733,7 +733,7 @@
                     <td>8080</td>
                 </tr>
                 <tr class="row-odd"><td>kairosdb.jetty.static_web_root</td>
-                    <td>页面在服务器的位置。</td>
+                    <td>页面在服务器的位置</td>
                     <td>必须</td>
                     <td>webroot</td>
                 </tr>
@@ -838,7 +838,7 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr class="row-even"><td>kairosdb.datastore.cassandra.increase_buffer_size_schedule</td>
-                    <td>如果Cassandra响应异常, KairosDB 将减少写缓冲区大小。. 这个属性标识kairosdb将试图增加缓冲区大小 它是 kairosdb.datastore.cassandra.write_buffer_max_size的备份. 使用 Quartz Cron 规则.</td>
+                    <td>如果Cassandra负载高，KairosDB将降低写入缓冲区的大小。 此属性标识KairosDB试图增加缓冲区大小递增频率，直到它恢复到kairosdb.datastore.cassandra.write_buffer_max_size。 使用 Quartz Cron 规则.</td>
                     <td>如果配置了使用Cassandra存储则生效</td>
                     <td>0 */5 * * * ?</td>
                 </tr>
@@ -848,28 +848,28 @@
                     <td>0 (forever)</td>
                 </tr>
                 <tr class="row-even"><td>kairosdb.datastore.hbase.timeseries_table</td>
-                    <td>Name of the HBase table metrics are stored in.</td>
-                    <td>Required if HBase is the selected datastore.</td>
+                    <td>存储指标的HBase表名</td>
+                    <td>如果选择HBase作为数据库必需.</td>
                     <td>tsdb</td>
                 </tr>
                 <tr class="row-odd"><td>kairosdb.datastore.hbase.uinqueids_table</td>
-                    <td>Name of the id table for HBase.</td>
-                    <td>Required if HBase is the selected datastore.</td>
+                    <td>唯一ID的HBase表名</td>
+                    <td>如果选择HBase作为数据库必需.</td>
                     <td>tsdb-uid</td>
                 </tr>
                 <tr class="row-even"><td>kairosdb.datastore.hbase.zoo_keeper_quorum</td>
                     <td>Zookeeper quorum host.</td>
-                    <td>Required if HBase is the selected datastore.</td>
+                    <td>如果选择HBase作为数据库必需.</td>
                     <td>localhost</td>
                 </tr>
                 <tr class="row-odd"><td>kairosdb.datastore.hbase.zoo_keeper_base_dir</td>
-                    <td>Zookeeper base directory.</td>
-                    <td>Required if using HBase with Zookeeper.</td>
+                    <td>Zookeeper基本目录.</td>
+                    <td>如果使用带Zookeeper的HBase则必需.</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr class="row-even"><td>kairosdb.datastore.hbase.auto_create_metrics</td>
-                    <td>If true, new metric names are created if they don&#8217;t exist. If false, metrics with new metric names are rejected.</td>
-                    <td>Required if HBase is the selected datastore.</td>
+                    <td>如果为true，如果不存在的指标将被创建。如果为FALSE，新的指标将被拒绝。.</td>
+                    <td>如果选择HBase作为数据库必需.</td>
                     <td>true</td>
                 </tr>
                 <tr class="row-odd"><td>kairosdb.service.oauth</td>
